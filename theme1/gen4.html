@@ -1,0 +1,2027 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              secondary: "#006398",
+              "on-background": "#0b1c30",
+              outline: "#76777d",
+              "inverse-on-surface": "#eaf1ff",
+              "secondary-fixed": "#cce5ff",
+              "on-secondary": "#ffffff",
+              "secondary-container": "#5bb8fe",
+              "surface-container-high": "#dce9ff",
+              "surface-container": "#e5eeff",
+              "outline-variant": "#c6c6cd",
+              "primary-fixed-dim": "#bec6e0",
+              "tertiary-fixed": "#dbe1ff",
+              "inverse-primary": "#bec6e0",
+              "on-surface": "#0b1c30",
+              surface: "#f8f9ff",
+              "tertiary-container": "#00174b",
+              "inverse-surface": "#213145",
+              primary: "#000000",
+              "on-tertiary": "#ffffff",
+              "primary-container": "#131b2e",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#b4c5ff",
+              "on-tertiary-fixed-variant": "#003ea8",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#00174b",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "surface-variant": "#d3e4fe",
+              "on-secondary-container": "#00476e",
+              "surface-container-highest": "#d3e4fe",
+              tertiary: "#000000",
+              "on-error": "#ffffff",
+              "on-secondary-fixed": "#001d31",
+              "on-primary-fixed": "#131b2e",
+              "on-primary-container": "#7c839b",
+              "surface-container-low": "#eff4ff",
+              error: "#ba1a1a",
+              "on-secondary-fixed-variant": "#004b73",
+              "primary-fixed": "#dae2fd",
+              "on-surface-variant": "#45464d",
+              "surface-tint": "#565e74",
+              "surface-dim": "#cbdbf5",
+              "on-tertiary-container": "#497cff",
+              "on-primary-fixed-variant": "#3f465c",
+              "secondary-fixed-dim": "#93ccff",
+              background: "#f8f9ff",
+              "surface-bright": "#f8f9ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-xl": "2.5rem",
+              "margin-mobile": "1rem",
+              "space-md": "1rem",
+              margin: "2rem",
+              "space-xs": "0.25rem",
+              "space-lg": "1.5rem",
+              gutter: "1.5rem",
+              "space-sm": "0.5rem",
+              "gutter-mobile": "1rem",
+            },
+            fontFamily: {
+              "body-lg": ["Inter"],
+              "headline-lg": ["Plus Jakarta Sans"],
+              "headline-sm": ["Plus Jakarta Sans"],
+              "headline-lg-mobile": ["Plus Jakarta Sans"],
+              "display-hero": ["Plus Jakarta Sans"],
+              "display-hero-mobile": ["Plus Jakarta Sans"],
+              "label-md": ["Inter"],
+              "body-md": ["Inter"],
+              "label-sm": ["Inter"],
+              "headline-md": ["Plus Jakarta Sans"],
+              "title-md": ["Plus Jakarta Sans"],
+              "body-sm": ["Inter"],
+            },
+            fontSize: {
+              "body-lg": [
+                "1.125rem",
+                { lineHeight: "1.75rem", fontWeight: "400" },
+              ],
+              "headline-lg": [
+                "2.25rem",
+                {
+                  lineHeight: "2.75rem",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "1.25rem",
+                {
+                  lineHeight: "1.75rem",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg-mobile": [
+                "1.75rem",
+                {
+                  lineHeight: "2.25rem",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-hero": [
+                "3.5rem",
+                {
+                  lineHeight: "4.25rem",
+                  letterSpacing: "-0.025em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-hero-mobile": [
+                "2.25rem",
+                {
+                  lineHeight: "2.75rem",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "label-md": [
+                "0.875rem",
+                {
+                  lineHeight: "1.25rem",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": ["1rem", { lineHeight: "1.5rem", fontWeight: "400" }],
+              "label-sm": [
+                "0.75rem",
+                {
+                  lineHeight: "1rem",
+                  letterSpacing: "0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "1.5rem",
+                {
+                  lineHeight: "2rem",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "600",
+                },
+              ],
+              "title-md": [
+                "1.125rem",
+                {
+                  lineHeight: "1.5rem",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "0.875rem",
+                { lineHeight: "1.25rem", fontWeight: "400" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-container-highest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-gutter"
+      >
+        <div class="flex items-center gap-space-md shrink-0">
+          <div
+            class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"
+          >
+            <svg
+              class="w-5 h-5 text-secondary-container"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+              ></path>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-title-md text-title-md text-on-surface tracking-tight font-bold leading-tight"
+              >Vanguard Global Talent</span
+            ><span
+              class="font-label-sm text-[11px] text-secondary tracking-wider uppercase font-semibold"
+              >International Workforce Placement</span
+            >
+          </div>
+        </div>
+        <nav
+          class="hidden lg:flex items-center gap-space-lg"
+          data-active-classes="text-primary font-bold border-b-2 border-primary"
+        >
+          <a
+            aria-current="page"
+            class="transition-colors py-space-xs text-primary font-bold border-b-2 border-primary"
+            data-path="home"
+            href="#"
+            >Home</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs"
+            data-path="about-us"
+            href="#"
+            >About Us</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs"
+            data-path="recruitment-services"
+            href="#"
+            >Recruitment Services</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs"
+            data-path="industries"
+            href="#"
+            >Industries</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs"
+            data-path="global-opportunities"
+            href="#"
+            >Global Opportunities</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs"
+            data-path="contact"
+            href="#"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-space-sm shrink-0">
+          <a
+            class="hidden md:inline-flex items-center justify-center px-space-md py-space-sm rounded-lg border border-outline-variant bg-surface-container-lowest font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors"
+            data-path="hire-international-talent"
+            href="#"
+            >For Employers</a
+          ><a
+            class="hidden md:inline-flex items-center justify-center px-space-md py-space-sm rounded-lg border border-outline-variant bg-surface-container-lowest font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors"
+            data-path="global-opportunities"
+            href="#"
+            >For Candidates</a
+          ><a
+            class="inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg bg-primary-container font-label-md text-label-md text-on-primary hover:bg-on-surface transition-colors"
+            data-path="contact"
+            href="#"
+            >Get in Touch</a
+          >
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+      <div class="flex flex-col w-full">
+        <!-- 1. HERO SECTION -->
+        <section
+          class="relative w-full bg-surface-container-lowest overflow-hidden"
+        >
+          <!-- Subtle Latitude / Longitude Vector Arcs Backdrop -->
+          <div class="absolute inset-0 pointer-events-none opacity-40">
+            <svg
+              class="w-full h-full text-surface-container-high"
+              fill="none"
+              preserveAspectRatio="none"
+              viewBox="0 0 1440 800"
+            >
+              <path
+                d="M-100,200 Q360,50 720,200 T1540,200"
+                stroke="currentColor"
+                stroke-dasharray="6 6"
+                stroke-width="1.2"
+              ></path>
+              <path
+                d="M-100,450 Q360,300 720,450 T1540,450"
+                stroke="currentColor"
+                stroke-dasharray="4 8"
+                stroke-width="1.2"
+              ></path>
+              <path
+                d="M-100,680 Q360,520 720,680 T1540,680"
+                stroke="currentColor"
+                stroke-dasharray="8 6"
+                stroke-width="1.2"
+              ></path>
+              <circle cx="280" cy="200" fill="#006398" r="4"></circle>
+              <circle cx="720" cy="450" fill="#006398" r="5"></circle>
+              <circle cx="1180" cy="200" fill="#006398" r="4.5"></circle>
+            </svg>
+          </div>
+          <div
+            class="relative max-w-7xl mx-auto px-margin py-space-xl lg:py-24"
+          >
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"
+            >
+              <!-- Left: Authority Content -->
+              <div class="lg:col-span-7 flex flex-col items-start">
+                <div
+                  class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container text-secondary text-label-sm font-label-sm uppercase tracking-wider mb-space-md"
+                >
+                  <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  International Workforce Placement &amp; Recruitment
+                </div>
+                <h1
+                  class="font-display-hero text-display-hero text-on-surface tracking-tight mb-space-md leading-tight"
+                >
+                  Connecting Global Talent With Opportunities Worldwide.
+                </h1>
+                <p
+                  class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-lg leading-relaxed"
+                >
+                  We bring talented individuals and international employers
+                  together through trusted recruitment, scalable workforce
+                  solutions, and compliant cross-border employment operations.
+                </p>
+                <!-- Dual CTAs -->
+                <div
+                  class="flex flex-wrap items-center gap-space-md mb-space-xl w-full sm:w-auto"
+                >
+                  <a
+                    class="inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold shadow-sm hover:shadow transition-all"
+                    data-path="global-opportunities"
+                    href="#"
+                    ><span>Find Opportunities</span
+                    ><span class="material-symbols-outlined text-[18px]"
+                      >arrow_forward</span
+                    ></a
+                  ><a
+                    class="inline-flex items-center justify-center px-space-lg py-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-variant transition-colors"
+                    data-path="hire-international-talent"
+                    href="#"
+                    >Hire Talent</a
+                  >
+                </div>
+                <!-- Trust Bar -->
+                <div
+                  class="w-full pt-space-md bg-surface-container-lowest/80 backdrop-blur-sm rounded-xl"
+                >
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+                    <div class="flex items-center gap-space-xs">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[22px]"
+                        >public</span
+                      >
+                      <span
+                        class="font-label-sm text-label-sm text-on-surface font-semibold"
+                        >Seamless Cross-Border Mobility</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-space-xs">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[22px]"
+                        >verified_user</span
+                      >
+                      <span
+                        class="font-label-sm text-label-sm text-on-surface font-semibold"
+                        >Rigorous Candidate Screening</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-space-xs">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[22px]"
+                        >gavel</span
+                      >
+                      <span
+                        class="font-label-sm text-label-sm text-on-surface font-semibold"
+                        >Comprehensive Employer Compliance</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Right: Layered Executive Photography -->
+              <div class="lg:col-span-5 relative">
+                <div
+                  class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-low aspect-[4/3] lg:aspect-[5/4]"
+                >
+                  <img
+                    alt="Authentic corporate documentary photograph of diverse multinational business professionals collaborating in a sunlit modern office atrium"
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZMba8i49RK9wCCRSmS2yeu-MGEoYLfBhgBrosCQ1heMvGlWFGHjWV2Z8b1T7-E5KPgOdyAVisjDOwe57kS23x3Lovy5RosS8PWLN-Xb4zRWfy1GDIch118Cme9s0Cvf4CJLvPMXFnBhsZzm5k34USZRXljSqifT2AE-exA6qbg3zXX9zDd2e3Hqbb3q4TAJDsQNV17WyG0P85lMUwP9Zlv3bVG2ImPC2O-_ajBCE"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary-container/60 via-transparent to-transparent"
+                  ></div>
+                  <div
+                    class="absolute bottom-space-md left-space-md right-space-md p-space-md rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-lg flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-space-sm">
+                      <div
+                        class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary"
+                      >
+                        <span class="material-symbols-outlined text-[24px]"
+                          >public</span
+                        >
+                      </div>
+                      <div>
+                        <div
+                          class="font-label-md text-label-md text-on-surface font-bold"
+                        >
+                          [International Placement Network Placeholder]
+                        </div>
+                        <div
+                          class="font-body-sm text-body-sm text-on-surface-variant"
+                        >
+                          Cross-Border Workforce &amp; Placement Services
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold"
+                      ><span
+                        class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"
+                      ></span
+                      >Global Mobility</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 2. INTRODUCTION / ABOUT US SECTION -->
+        <section class="w-full py-space-xl bg-surface-container-low">
+          <div class="max-w-7xl mx-auto px-margin">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"
+            >
+              <div class="lg:col-span-6 relative">
+                <div
+                  class="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3]"
+                >
+                  <img
+                    alt="International enterprise talent advisors and consultants meeting with corporate leaders"
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhWMqEUpfx5_S1hPLJRHEnK_vOe2GqFr6ieKz-L5StKki918P11TjHcBWtWIdOycbSYCgPohfkYtYdjiIz0hYZ7HhvqOnnP6AawH67lJ5_VF_Cjh_jexwW6W2--n4TerQt_CGHJKoFYGtF-KOQ25QUUhi3VnH7L5EuEjxK42LXyo8hAFPb2jCK5_ndLmup3ezlfp5BjBFZseoMxmfuDKeD_Vkh4TOZ_rCgJNc4ABs"
+                  />
+                </div>
+                <div
+                  class="absolute -bottom-6 -right-2 sm:right-6 max-w-xs p-space-md bg-surface-container-lowest rounded-xl shadow-xl flex items-start gap-space-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[28px] mt-0.5"
+                    >handshake</span
+                  >
+                  <div>
+                    <p
+                      class="font-label-md text-label-md text-on-surface font-bold leading-snug"
+                    >
+                      Ethical Recruitment Commitment
+                    </p>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-normal"
+                    >
+                      Adhering to recognized fair recruitment standards,
+                      transparent terms, and professional candidate care.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-6 flex flex-col pt-space-lg lg:pt-0">
+                <span
+                  class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold mb-space-xs"
+                  >About Vanguard Global Talent</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-md"
+                >
+                  Bridging the Gap Between Ambitious Enterprises and Worldwide
+                  Expertise.
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed"
+                >
+                  Behind every successful global expansion are passionate
+                  professionals and vision-driven organizations. We bring a
+                  human touch to cross-border recruitment—listening attentively
+                  to individual career aspirations while helping international
+                  enterprises build resilient, diverse, and forward-looking
+                  teams.
+                </p>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed"
+                >
+                  Our advisory model combines deep regional insight with
+                  transparent governance. From navigating complex statutory
+                  mobility to ensuring welcoming local integration, we support
+                  both our corporate partners and candidates at each milestone.
+                </p>
+                <div class="flex flex-col gap-space-sm mb-space-lg">
+                  <div
+                    class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >verified</span
+                    ><span
+                      class="font-title-md text-title-md text-on-surface font-semibold"
+                      >Ethical International Placement</span
+                    ><span
+                      class="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline"
+                      >— Fair, transparent, and compliant recruitment
+                      practices.</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >shield</span
+                    ><span
+                      class="font-title-md text-title-md text-on-surface font-semibold"
+                      >Cross-Border Compliance Advisory</span
+                    ><span
+                      class="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline"
+                      >— Guidance on immigration procedures, documentation, and
+                      host country standards.</span
+                    >
+                  </div>
+                  <div
+                    class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >support_agent</span
+                    ><span
+                      class="font-title-md text-title-md text-on-surface font-semibold"
+                      >Dedicated Placement Coordinators</span
+                    ><span
+                      class="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline"
+                      >— Responsive advisory supporting candidates and employers
+                      from onboarding onward.</span
+                    >
+                  </div>
+                </div>
+                <div>
+                  <a
+                    class="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary hover:text-on-surface transition-colors font-bold"
+                    data-path="about-us"
+                    href="#"
+                    ><span>Learn More About Our Approach</span
+                    ><span class="material-symbols-outlined text-[18px]"
+                      >arrow_forward</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 3. RECRUITMENT SERVICES SECTION -->
+        <section class="w-full py-space-xl bg-surface-container-lowest">
+          <div class="max-w-7xl mx-auto px-margin">
+            <div class="max-w-3xl mb-space-xl">
+              <span
+                class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold mb-space-xs block"
+                >Our Recruitment Services</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-xs"
+              >
+                Comprehensive Workforce Solutions Built for Cross-Border Scale.
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Tailored solutions connecting international employers with
+                qualified professionals across borders.
+              </p>
+            </div>
+            <!-- Grid of 5 Services -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg"
+            >
+              <div
+                class="group flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all shadow-sm hover:shadow-md"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-md shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-[28px]"
+                      >flight_takeoff</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-bold"
+                  >
+                    International Recruitment
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md"
+                  >
+                    Comprehensive sourcing and candidate shortlisting across
+                    international jurisdictions, matching qualified talent to
+                    employer staffing requirements.
+                  </p>
+                </div>
+                <a
+                  class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold group-hover:translate-x-1 transition-transform"
+                  data-path="recruitment-services"
+                  href="#"
+                  ><span>Explore Service</span
+                  ><span class="material-symbols-outlined text-[16px]"
+                    >arrow_forward</span
+                  ></a
+                >
+              </div>
+              <div
+                class="group flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all shadow-sm hover:shadow-md"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-md shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-[28px]"
+                      >groups_3</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-bold"
+                  >
+                    Overseas Workforce Placement
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md"
+                  >
+                    Scalable workforce solutions for global operations, regional
+                    projects, and multi-market companies requiring compliant
+                    international personnel.
+                  </p>
+                </div>
+                <a
+                  class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold group-hover:translate-x-1 transition-transform"
+                  data-path="recruitment-services"
+                  href="#"
+                  ><span>Explore Service</span
+                  ><span class="material-symbols-outlined text-[16px]"
+                    >arrow_forward</span
+                  ></a
+                >
+              </div>
+              <div
+                class="group flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all shadow-sm hover:shadow-md"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-md shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-[28px]"
+                      >psychology</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-bold"
+                  >
+                    Skilled &amp; Professional Staffing
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md"
+                  >
+                    Targeted talent acquisition for technical, vocational, and
+                    corporate functions where employers experience localized
+                    skills shortages.
+                  </p>
+                </div>
+                <a
+                  class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold group-hover:translate-x-1 transition-transform"
+                  data-path="recruitment-services"
+                  href="#"
+                  ><span>Explore Service</span
+                  ><span class="material-symbols-outlined text-[16px]"
+                    >arrow_forward</span
+                  ></a
+                >
+              </div>
+              <div
+                class="group flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all shadow-sm hover:shadow-md"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-md shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-[28px]"
+                      >manage_accounts</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-bold"
+                  >
+                    Employer Recruitment Solutions
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md"
+                  >
+                    End-to-end campaign coordination, initial candidate
+                    screening, credential review, and structured interview
+                    scheduling across time zones.
+                  </p>
+                </div>
+                <a
+                  class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold group-hover:translate-x-1 transition-transform"
+                  data-path="hire-international-talent"
+                  href="#"
+                  ><span>Explore Service</span
+                  ><span class="material-symbols-outlined text-[16px]"
+                    >arrow_forward</span
+                  ></a
+                >
+              </div>
+              <div
+                class="group lg:col-span-2 flex flex-col md:flex-row justify-between items-start md:items-center p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all shadow-sm hover:shadow-md gap-space-md"
+              >
+                <div class="max-w-xl">
+                  <div
+                    class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-md shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-[28px]"
+                      >support_agent</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-bold"
+                  >
+                    Candidate Career Advisory &amp; Support
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Resume review, international interview preparation,
+                    credential organization guidance, and relocation transition
+                    orientation for qualified applicants.
+                  </p>
+                </div>
+                <div class="shrink-0 self-end md:self-center">
+                  <a
+                    class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-colors shadow-sm"
+                    data-path="candidate-support"
+                    href="#"
+                    ><span>Candidate Desk</span
+                    ><span class="material-symbols-outlined text-[16px]"
+                      >arrow_forward</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 4. GLOBAL OPPORTUNITIES SECTION -->
+        <section class="w-full py-space-xl bg-surface-container-low">
+          <div class="max-w-7xl mx-auto px-margin">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md"
+            >
+              <div>
+                <span
+                  class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold mb-space-xs block"
+                  >Global Opportunities</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg text-on-surface tracking-tight"
+                >
+                  Connecting Professionals to Thriving Employment Hubs
+                  Worldwide.
+                </h2>
+                <p
+                  class="font-body-lg text-body-lg text-on-surface-variant mt-1"
+                >
+                  Active cross-border corridors across primary economic markets
+                  and critical infrastructure zones.
+                </p>
+              </div>
+              <a
+                class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md shadow-md hover:opacity-95 transition-all shrink-0"
+                data-path="global-opportunities"
+                href="#"
+                ><span>Explore All International Vacancies</span
+                ><span class="material-symbols-outlined text-[18px]"
+                  >travel_explore</span
+                ></a
+              >
+            </div>
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-md bg-surface-container-lowest mb-space-xl border border-outline-variant"
+            >
+              <img
+                alt="Abstract minimalist world map data visualization with interconnected bilateral corridor pathways"
+                class="w-full max-h-[360px] object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkI2KhfTd_0oi8464mi2UXkkOSaDT-kO727J3rhXnkAR8RnX0e0n6dVL9AhuJuEJeUTX3lK-zOtSXmbSJZwnnnca5oknz4SDg-8ZaqFoYwrIDVpMKeVbf_4aSlivqmGvo4QA69OqITXu2HPu3Jbcd9WNVeUlfmyY1UJrtSQCuxk155aEYgLwappDmFyC-ysMgwQcRq1Jo4r_o95LOhHs9hRFpCJhTZD4Y5Bw378u8"
+              />
+              <div
+                class="absolute bottom-space-md left-space-md right-space-md p-space-sm rounded-lg bg-surface-container-lowest/95 backdrop-blur-sm border border-outline-variant flex flex-wrap items-center justify-between text-body-sm text-on-surface"
+              >
+                <div class="flex items-center gap-space-xs">
+                  <span
+                    class="material-symbols-outlined text-secondary text-[20px]"
+                    >hub</span
+                  ><span class="font-semibold"
+                    >Bilateral Talent Corridors Overview</span
+                  >
+                </div>
+                <span class="font-label-sm text-secondary font-bold"
+                  >[Client Configured Geographic Networks]</span
+                >
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl"
+            >
+              <div
+                class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold"
+                      >[Representative Corridor]</span
+                    ><span
+                      class="material-symbols-outlined text-outline-variant"
+                      >public</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs"
+                  >
+                    [Example Corridor - Western Europe Hub]
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mb-space-md"
+                  >
+                    Representative corridor facilitating cross-border staffing
+                    in engineering, operations, healthcare support, and skilled
+                    services.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mb-space-md">
+                    <span
+                      class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-surface-container-low text-on-surface"
+                      >Engineering</span
+                    ><span
+                      class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-surface-container-low text-on-surface"
+                      >Healthcare Support</span
+                    ><span
+                      class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-surface-container-low text-on-surface"
+                      >Skilled Services</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="pt-space-sm text-on-surface-variant font-label-sm text-label-sm flex items-center justify-between"
+                >
+                  <span>Active Placement Stream</span
+                  ><span class="text-secondary font-bold"
+                    >[Client Specified Roles]</span
+                  >
+                </div>
+              </div>
+              <div
+                class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold"
+                      >[Representative Corridor]</span
+                    ><span
+                      class="material-symbols-outlined text-outline-variant"
+                      >public</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs"
+                  >
+                    [Example Corridor - North America Hub]
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mb-space-md"
+                  >
+                    Illustrative pathway supporting technical specialists,
+                    logistics managers, and operations personnel.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mb-space-md">
+                    <span
+                      class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-surface-container-low text-on-surface"
+                      >Technical Specialists</span
+                    ><span
+                      class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-surface-container-low text-on-surface"
+                      >Logistics</span
+                    ><span
+                      class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-surface-container-low text-on-surface"
+                      >Operations</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="pt-space-sm text-on-surface-variant font-label-sm text-label-sm flex items-center justify-between"
+                >
+                  <span>Active Placement Stream</span
+                  ><span class="text-secondary font-bold"
+                    >[Client Inquiries Open]</span
+                  >
+                </div>
+              </div>
+              <div
+                class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold"
+                      >[Representative Corridor]</span
+                    ><span
+                      class="material-symbols-outlined text-outline-variant"
+                      >public</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs"
+                  >
+                    [Example Corridor - Asia-Pacific Hub]
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mb-space-md"
+                  >
+                    Representative corridor supporting growth initiatives across
+                    logistics, engineering, digital services, and operations.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mb-space-md">
+                    <span
+                      class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-surface-container-low text-on-surface"
+                      >Logistics</span
+                    ><span
+                      class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-surface-container-low text-on-surface"
+                      >Engineering</span
+                    ><span
+                      class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-surface-container-low text-on-surface"
+                      >Digital Services</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="pt-space-sm text-on-surface-variant font-label-sm text-label-sm flex items-center justify-between"
+                >
+                  <span>Active Placement Stream</span
+                  ><span class="text-secondary font-bold"
+                    >[Client Specified Roles]</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm"
+            >
+              <h4
+                class="font-title-md text-title-md text-on-surface font-bold mb-space-md"
+              >
+                Featured International Placement Sectors
+              </h4>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+                <div
+                  class="p-space-md rounded-xl bg-surface-container-low flex flex-col"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[24px] mb-space-xs"
+                    >engineering</span
+                  ><span
+                    class="font-label-md text-label-md text-on-surface font-bold"
+                    >[Engineering &amp; Technical]</span
+                  ><span
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                    >Mechanical, Electrical, Civil &amp; Industrial</span
+                  >
+                </div>
+                <div
+                  class="p-space-md rounded-xl bg-surface-container-low flex flex-col"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[24px] mb-space-xs"
+                    >local_hospital</span
+                  ><span
+                    class="font-label-md text-label-md text-on-surface font-bold"
+                    >[Healthcare &amp; Care Services]</span
+                  ><span
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                    >Clinical, Nursing, Allied &amp; Support Care</span
+                  >
+                </div>
+                <div
+                  class="p-space-md rounded-xl bg-surface-container-low flex flex-col"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[24px] mb-space-xs"
+                    >terminal</span
+                  ><span
+                    class="font-label-md text-label-md text-on-surface font-bold"
+                    >[Information Technology]</span
+                  ><span
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                    >Software, Infrastructure, Cloud &amp; Data</span
+                  >
+                </div>
+                <div
+                  class="p-space-md rounded-xl bg-surface-container-low flex flex-col"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[24px] mb-space-xs"
+                    >account_balance</span
+                  ><span
+                    class="font-label-md text-label-md text-on-surface font-bold"
+                    >[Logistics &amp; Operations]</span
+                  ><span
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                    >Supply Chain, Fleet, Facilities &amp; Dispatch</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 5. TWO DEDICATED AUDIENCE PATHWAYS -->
+        <section class="w-full py-space-xl bg-surface-container-lowest">
+          <div class="max-w-7xl mx-auto px-margin">
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-lg mb-space-xl bg-surface-container-low max-h-72"
+            >
+              <img
+                alt="Editorial composition showing enterprise executive in tech facility and specialist smiling in workplace"
+                class="w-full h-64 md:h-72 object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDplJNj-krSJ6D1vacEytO2LlRAxPWrqqkw7kx_oW_wdrcGx5DUA8_EWoawIKe-XbOu9YjSj_JRwGpWrhiannzcDs_xnoHGNiFAax6QPvQjgCD3TDH6XtHQYdqeN_1hfxn_rTYcqN6u8KruX6meOvSE3h8DSMCm8jd5M6Hn21v0eEiKvU_zg3WqzbUSya_sie-fi59UNyu16Tb6bvlXiExhgBsbULsC1VbUW3orC2Y"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-primary-container/20 to-transparent flex items-end p-space-lg"
+              >
+                <div class="text-on-primary">
+                  <span
+                    class="font-label-sm text-secondary-container uppercase tracking-widest font-bold block mb-space-xs"
+                    >Tailored International Pathways</span
+                  >
+                  <h3
+                    class="font-headline-md text-on-primary font-bold tracking-tight"
+                  >
+                    Collaborating With Global Industry Leaders and Exceptional
+                    Professionals.
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl items-stretch"
+            >
+              <div
+                class="flex flex-col justify-between p-space-xl rounded-2xl bg-primary-container text-surface-container-high shadow-xl relative overflow-hidden"
+              >
+                <div class="relative z-10">
+                  <div
+                    class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high/10 text-secondary-container font-label-sm text-label-sm uppercase tracking-wider mb-space-md font-bold"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >domain</span
+                    >For Institutional Employers
+                  </div>
+                  <h3
+                    class="font-headline-lg text-headline-lg text-on-primary tracking-tight mb-space-md"
+                  >
+                    Find the Right Talent for Your Business.
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-primary-fixed-dim leading-relaxed mb-space-lg"
+                  >
+                    Vanguard accelerates international workforce recruitment,
+                    coordinates cross-border processes, and delivers screened
+                    professionals ready to integrate into your corporate
+                    structure smoothly.
+                  </p>
+                  <div class="flex flex-col gap-space-sm mb-space-xl">
+                    <div class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-secondary-container text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      >
+                      <div>
+                        <span
+                          class="font-label-md text-label-md text-on-primary block font-semibold"
+                          >Verified Candidate Sourcing</span
+                        ><span
+                          class="font-body-sm text-body-sm text-primary-fixed-dim"
+                          >Multi-stage assessment, credential evaluation, and
+                          skills verification.</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-secondary-container text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      >
+                      <div>
+                        <span
+                          class="font-label-md text-label-md text-on-primary block font-semibold"
+                          >International Recruitment Coordination</span
+                        ><span
+                          class="font-body-sm text-body-sm text-primary-fixed-dim"
+                          >Structured compliance advisory and end-to-end
+                          recruitment process management.</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-secondary-container text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      >
+                      <div>
+                        <span
+                          class="font-label-md text-label-md text-on-primary block font-semibold"
+                          >Predictable Timelines &amp; Service Levels</span
+                        ><span
+                          class="font-body-sm text-body-sm text-primary-fixed-dim"
+                          >Agreed milestones from initial sourcing brief to
+                          candidate onboarding.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative z-10 pt-space-md">
+                  <a
+                    class="inline-flex items-center justify-center gap-space-xs px-space-xl py-3 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold shadow-md hover:brightness-105 transition-all"
+                    data-path="hire-international-talent"
+                    href="#"
+                    ><span>Hire International Talent</span
+                    ><span class="material-symbols-outlined text-[18px]"
+                      >arrow_forward</span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col justify-between p-space-xl rounded-2xl bg-surface-container-low text-on-surface shadow-md relative overflow-hidden"
+              >
+                <div class="relative z-10">
+                  <div
+                    class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-space-md font-bold"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >badge</span
+                    >For International Candidates
+                  </div>
+                  <h3
+                    class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-md"
+                  >
+                    Your Next Career Opportunity Could Be Worldwide.
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-lg"
+                  >
+                    Explore cross-border employment opportunities with
+                    transparent advisory, role preparation, and step-by-step
+                    guidance throughout your international transition.
+                  </p>
+                  <div class="flex flex-col gap-space-sm mb-space-xl">
+                    <div class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      >
+                      <div>
+                        <span
+                          class="font-label-md text-label-md text-on-surface block font-semibold"
+                          >Access to Legitimate International Employers</span
+                        ><span
+                          class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Direct introductions to established overseas
+                          enterprises across active employment hubs.</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      >
+                      <div>
+                        <span
+                          class="font-label-md text-label-md text-on-surface block font-semibold"
+                          >Ethical Placement Principles</span
+                        ><span
+                          class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Adherence to responsible recruitment standards and
+                          transparent job documentation.</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      >
+                      <div>
+                        <span
+                          class="font-label-md text-label-md text-on-surface block font-semibold"
+                          >Relocation &amp; Onboarding Guidance</span
+                        ><span
+                          class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Structured advisory on international interview
+                          preparation and pre-departure checklists.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative z-10 pt-space-md">
+                  <a
+                    class="inline-flex items-center justify-center gap-space-xs px-space-xl py-3 rounded-lg bg-on-surface text-surface font-label-md text-label-md font-bold shadow-md hover:bg-secondary transition-all"
+                    data-path="global-opportunities"
+                    href="#"
+                    ><span>Explore Opportunities</span
+                    ><span class="material-symbols-outlined text-[18px]"
+                      >arrow_forward</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 6. HOW IT WORKS (Recruitment Process) -->
+        <section class="w-full py-space-xl bg-surface-container-low">
+          <div class="max-w-7xl mx-auto px-margin">
+            <div class="text-center max-w-3xl mx-auto mb-space-xl">
+              <span
+                class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold mb-space-xs block"
+                >Our Recruitment Process</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-xs"
+              >
+                A Transparent, Structured 4-Step Placement Framework.
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Ensuring seamless alignment, thorough vetting, and zero-friction
+                international onboarding.
+              </p>
+            </div>
+            <!-- 4-Step Timeline Desktop Grid -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg relative"
+            >
+              <!-- Step 1 -->
+              <div
+                class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative group"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="font-display-hero text-headline-lg text-secondary/30 font-bold"
+                      >01</span
+                    >
+                    <span
+                      class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center text-label-sm font-bold"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >assignment</span
+                      >
+                    </span>
+                  </div>
+                  <h4
+                    class="font-title-md text-title-md text-on-surface font-bold mb-space-xs"
+                  >
+                    Registration &amp; Assessment
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Aligning talent profiles with employer specifications,
+                    compensation benchmarking, and bilateral visa eligibility
+                    parameters.
+                  </p>
+                </div>
+                <div
+                  class="pt-space-md mt-space-md border-t-0 font-label-sm text-label-sm text-secondary font-semibold"
+                >
+                  Initial Alignment Phase
+                </div>
+              </div>
+              <!-- Step 2 -->
+              <div
+                class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative group"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="font-display-hero text-headline-lg text-secondary/30 font-bold"
+                      >02</span
+                    >
+                    <span
+                      class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center text-label-sm font-bold"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >verified</span
+                      >
+                    </span>
+                  </div>
+                  <h4
+                    class="font-title-md text-title-md text-on-surface font-bold mb-space-xs"
+                  >
+                    Screening &amp; Shortlisting
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Comprehensive background vetting, professional credential
+                    verification, technical assessments, and language
+                    proficiencies.
+                  </p>
+                </div>
+                <div
+                  class="pt-space-md mt-space-md border-t-0 font-label-sm text-label-sm text-secondary font-semibold"
+                >
+                  Verification Protocol
+                </div>
+              </div>
+              <!-- Step 3 -->
+              <div
+                class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative group"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="font-display-hero text-headline-lg text-secondary/30 font-bold"
+                      >03</span
+                    >
+                    <span
+                      class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center text-label-sm font-bold"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >video_chat</span
+                      >
+                    </span>
+                  </div>
+                  <h4
+                    class="font-title-md text-title-md text-on-surface font-bold mb-space-xs"
+                  >
+                    Interview &amp; Selection
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Structured international video interview panels, technical
+                    competency evaluations, and synchronized employer
+                    selections.
+                  </p>
+                </div>
+                <div
+                  class="pt-space-md mt-space-md border-t-0 font-label-sm text-label-sm text-secondary font-semibold"
+                >
+                  Client Interaction
+                </div>
+              </div>
+              <!-- Step 4 -->
+              <div
+                class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative group"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="font-display-hero text-headline-lg text-secondary/30 font-bold"
+                      >04</span
+                    >
+                    <span
+                      class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center text-label-sm font-bold"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >how_to_reg</span
+                      >
+                    </span>
+                  </div>
+                  <h4
+                    class="font-title-md text-title-md text-on-surface font-bold mb-space-xs"
+                  >
+                    Placement &amp; Onboarding
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Official contract ratification, immigration filings,
+                    pre-departure briefings, and coordinated host country
+                    induction.
+                  </p>
+                </div>
+                <div
+                  class="pt-space-md mt-space-md border-t-0 font-label-sm text-label-sm text-secondary font-semibold"
+                >
+                  Mobility &amp; Transition
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 7. WHY CHOOSE US (Corporate Trust Pillars) -->
+        <section class="w-full py-space-xl bg-surface-container-lowest">
+          <div class="max-w-7xl mx-auto px-margin">
+            <div class="max-w-3xl mb-space-xl">
+              <span
+                class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold mb-space-xs block"
+                >Corporate Governance</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-xs"
+              >
+                Why Enterprises and Talent Rely on Vanguard.
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Built on operational transparency, ethical labor standards, and
+                an unwavering commitment to both hiring organizations and
+                individual careers.
+              </p>
+            </div>
+            <!-- 5 Foundational Trust Pillars Grid -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg"
+            >
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low flex flex-col"
+              >
+                <div
+                  class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-sm shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >diversity_3</span
+                  >
+                </div>
+                <h4
+                  class="font-title-md text-title-md text-on-surface font-bold mb-space-xs"
+                >
+                  Professional Recruitment Support
+                </h4>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  Multilingual recruitment consultants dedicated to managing
+                  communication smoothly across diverse time zones and
+                  operational cultures.
+                </p>
+              </div>
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low flex flex-col"
+              >
+                <div
+                  class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-sm shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-[22px]">hub</span>
+                </div>
+                <h4
+                  class="font-title-md text-title-md text-on-surface font-bold mb-space-xs"
+                >
+                  International Hiring Network
+                </h4>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  Direct operational presence and vetted affiliate desks
+                  spanning key employment regions across Europe, the Middle
+                  East, Asia-Pacific, and the Americas.
+                </p>
+              </div>
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low flex flex-col"
+              >
+                <div
+                  class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-sm shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >policy</span
+                  >
+                </div>
+                <h4
+                  class="font-title-md text-title-md text-on-surface font-bold mb-space-xs"
+                >
+                  Transparent Recruitment Process
+                </h4>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  Honest communication, clear expectations, verifiable
+                  credentials, and no hidden clauses or unexpected placement
+                  fees.
+                </p>
+              </div>
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low flex flex-col"
+              >
+                <div
+                  class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-sm shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >school</span
+                  >
+                </div>
+                <h4
+                  class="font-title-md text-title-md text-on-surface font-bold mb-space-xs"
+                >
+                  Candidate-Focused Guidance
+                </h4>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  Respectful advocacy for job seekers with comprehensive
+                  interview preparation, relocation roadmaps, and honest career
+                  assessment.
+                </p>
+              </div>
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low flex flex-col md:col-span-2 lg:col-span-2"
+              >
+                <div
+                  class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary mb-space-sm shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >corporate_fare</span
+                  >
+                </div>
+                <h4
+                  class="font-title-md text-title-md text-on-surface font-bold mb-space-xs"
+                >
+                  Employer-Focused Solutions
+                </h4>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  Custom-tailored recruitment workflows built around each
+                  enterprise’s talent timelines, technical prerequisites, and
+                  immigration constraints, ensuring sustained productivity from
+                  day one.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 8. VOICES OF OUR GLOBAL NETWORK (Editorial Testimonials) -->
+        <section class="w-full py-space-xl bg-surface-container-low">
+          <div class="max-w-7xl mx-auto px-margin">
+            <div class="text-center max-w-3xl mx-auto mb-space-xl">
+              <span
+                class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold mb-space-xs block"
+                >Voices of Our Global Network</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-xs"
+              >
+                International Success Built on Trust.
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Verified feedback and documented outcomes from enterprise
+                partners and relocated specialists.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+              <div
+                class="p-space-xl rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between border border-outline-variant/30"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold"
+                      >[Client Testimonial Placeholder — International
+                      Employer]</span
+                    >
+                    <div class="flex text-secondary">
+                      <span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      ><span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      ><span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      ><span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      ><span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      >
+                    </div>
+                  </div>
+                  <p
+                    class="font-body-lg text-body-lg text-on-surface italic leading-relaxed mb-space-lg"
+                  >
+                    "Deploying specialized technical engineers for our
+                    multi-phase capital project required absolute adherence to
+                    cross-border immigration schedules and credential
+                    verification. Vanguard delivered rigorously vetted personnel
+                    with complete transparency at every stage."
+                  </p>
+                </div>
+                <div class="flex items-center gap-space-md pt-space-md">
+                  <div
+                    class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary font-bold font-title-md"
+                  >
+                    P
+                  </div>
+                  <div>
+                    <div
+                      class="font-title-md text-title-md text-on-surface font-bold"
+                    >
+                      [Head of International Talent / Partner Reference]
+                    </div>
+                    <div
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Major International Infrastructure Group
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="p-space-xl rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between border border-outline-variant/30"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <span
+                      class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold"
+                      >[Candidate Testimonial Placeholder — Placed
+                      Professional]</span
+                    >
+                    <div class="flex text-secondary">
+                      <span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      ><span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      ><span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      ><span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      ><span class="material-symbols-outlined text-[18px]"
+                        >star</span
+                      >
+                    </div>
+                  </div>
+                  <p
+                    class="font-body-lg text-body-lg text-on-surface italic leading-relaxed mb-space-lg"
+                  >
+                    "Moving across continents for an international healthcare
+                    specialist role felt daunting until I engaged with Vanguard.
+                    Their advisors prepared me for every technical evaluation
+                    panel, guided our documentation, and checked on our
+                    transition months after arrival."
+                  </p>
+                </div>
+                <div class="flex items-center gap-space-md pt-space-md">
+                  <div
+                    class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary font-bold font-title-md"
+                  >
+                    C
+                  </div>
+                  <div>
+                    <div
+                      class="font-title-md text-title-md text-on-surface font-bold"
+                    >
+                      [Senior Clinical Specialist Reference]
+                    </div>
+                    <div
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Relocated to Accredited Healthcare Network
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 9. FINAL CALL TO ACTION (Full-Width Impactful Banner) -->
+        <section
+          class="w-full py-space-xl bg-primary-container text-surface-container-high relative overflow-hidden"
+        >
+          <!-- Subtle Background Vector Contour -->
+          <div class="absolute inset-0 pointer-events-none opacity-20">
+            <svg
+              class="w-full h-full text-secondary"
+              fill="none"
+              preserveAspectRatio="none"
+              viewBox="0 0 1440 400"
+            >
+              <path
+                d="M0,200 C300,100 600,300 900,150 C1200,50 1350,250 1440,200 L1440,400 L0,400 Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <div class="relative max-w-5xl mx-auto px-margin text-center">
+            <span
+              class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-container font-bold mb-space-xs block"
+              >Get Started Today</span
+            >
+            <h2
+              class="font-display-hero text-headline-lg lg:text-display-hero text-on-primary tracking-tight mb-space-md"
+            >
+              Let's Build Your Next Global Workforce.
+            </h2>
+            <p
+              class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl mx-auto mb-space-xl leading-relaxed"
+            >
+              Whether you are an employer seeking specialized international
+              talent or a professional exploring career opportunities overseas,
+              our advisors are here to guide your next step.
+            </p>
+            <div
+              class="flex flex-wrap items-center justify-center gap-space-md"
+            >
+              <a
+                class="inline-flex items-center justify-center gap-space-xs px-space-xl py-3 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold shadow-lg hover:brightness-105 transition-all"
+                data-path="hire-international-talent"
+                href="#"
+              >
+                <span>Looking for Talent?</span>
+                <span class="material-symbols-outlined text-[18px]"
+                  >business</span
+                >
+              </a>
+              <a
+                class="inline-flex items-center justify-center gap-space-xs px-space-xl py-3 rounded-lg bg-surface-container-high/10 text-on-primary font-label-md text-label-md hover:bg-surface-container-high/20 transition-colors"
+                data-path="global-opportunities"
+                href="#"
+              >
+                <span>Looking for Opportunities?</span>
+                <span class="material-symbols-outlined text-[18px]"
+                  >person_search</span
+                >
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="w-full bg-primary-container text-surface-container-high">
+      <div class="max-w-7xl mx-auto px-margin pt-space-xl pb-space-lg">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"
+        >
+          <div class="lg:col-span-1 flex flex-col gap-space-sm">
+            <div class="flex items-center gap-space-sm">
+              <img
+                alt="Vanguard Global Talent Logo"
+                class="h-8 w-auto object-contain brightness-200"
+                src="https://lh3.googleusercontent.com/aida/ALJJyrDpBDCHRw0iYD_7a1iEFKACe2xdsC9QwUFjTg0KRweVFHztHL1O17z4DHEE2Kfd49NbTBeyahkZcLdj2vNRN86vWJHIS8xFTBWrzRvoymwnNLQyT1H5vyR4oonGofqQ9fW8y_5yec-0roggKJX6hKUbCQ6FbYKNyVnpNuUa57dAufB9vdMoxajvHc63YWu-QrSYEn-C6pR9SLXpQwg9Dl3OOH42Eu-Cyxeb9AvlxzDW"
+              /><span
+                class="font-title-md text-title-md text-on-primary font-bold"
+                >Vanguard</span
+              >
+            </div>
+            <p
+              class="font-label-md text-label-md text-secondary-container font-semibold mt-space-xs"
+            >
+              Connecting Global Talent With Opportunities Worldwide
+            </p>
+            <p
+              class="font-body-sm text-body-sm text-primary-fixed-dim leading-relaxed"
+            >
+              International recruitment and overseas workforce placement
+              consultancy connecting qualified job seekers with worldwide
+              opportunities.
+            </p>
+            <div
+              class="flex items-center gap-space-xs pt-space-xs text-secondary-container"
+            >
+              <span class="material-symbols-outlined text-[18px]">public</span
+              ><span
+                class="font-label-sm text-label-sm tracking-wide uppercase font-semibold"
+                >[Verified Global Placement Network]</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col gap-space-sm">
+            <span
+              class="font-title-md text-title-md text-on-primary font-bold mb-space-xs"
+              >Recruitment Services</span
+            >
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="recruitment-services"
+                  href="#"
+                  >International Recruitment</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="recruitment-services"
+                  href="#"
+                  >Overseas Workforce Placement</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="recruitment-services"
+                  href="#"
+                  >Skilled Talent Acquisition</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="hire-international-talent"
+                  href="#"
+                  >Employer Recruitment Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="candidate-support"
+                  href="#"
+                  >Candidate Recruitment Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-space-sm">
+            <span
+              class="font-title-md text-title-md text-on-primary font-bold mb-space-xs"
+              >For Employers</span
+            >
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="hire-international-talent"
+                  href="#"
+                  >Hire International Talent</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="cross-border-advisory"
+                  href="#"
+                  >Cross-Border Advisory</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="hire-international-talent"
+                  href="#"
+                  >Employer Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="contact"
+                  href="#"
+                  >Request Consultation</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-space-sm">
+            <span
+              class="font-title-md text-title-md text-on-primary font-bold mb-space-xs"
+              >For Candidates</span
+            >
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim"
+            >
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="global-opportunities"
+                  href="#"
+                  >Explore Opportunities</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="global-opportunities"
+                  href="#"
+                  >International Job Search</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="candidate-support"
+                  href="#"
+                  >Candidate Support &amp; Relocation</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-primary transition-colors"
+                  data-path="candidate-support"
+                  href="#"
+                  >Career FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-space-sm">
+            <span
+              class="font-title-md text-title-md text-on-primary font-bold mb-space-xs"
+              >Contact &amp; Global Desks</span
+            >
+            <p class="font-body-sm text-body-sm text-primary-fixed-dim">
+              Inquiries: inquiries@[clientdomain].com
+            </p>
+            <p class="font-body-sm text-body-sm text-primary-fixed-dim">
+              Contact Desk: +[Country Code] [Phone Number Placeholder]
+            </p>
+            <p class="font-body-sm text-body-sm text-primary-fixed-dim">
+              Corporate Address: [Corporate Headquarters Address Placeholder]
+            </p>
+            <div class="flex items-center gap-space-sm pt-space-xs">
+              <a
+                aria-label="Corporate Network"
+                class="w-8 h-8 rounded-lg bg-surface-container-high/10 flex items-center justify-center text-on-primary hover:bg-secondary transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >share</span
+                ></a
+              ><a
+                aria-label="Global News"
+                class="w-8 h-8 rounded-lg bg-surface-container-high/10 flex items-center justify-center text-on-primary hover:bg-secondary transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >feed</span
+                ></a
+              ><a
+                aria-label="Global Inquiries"
+                class="w-8 h-8 rounded-lg bg-surface-container-high/10 flex items-center justify-center text-on-primary hover:bg-secondary transition-colors"
+                href="#"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >mail</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-on-surface-variant/30 pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-primary-container"
+        >
+          <p>© 2025 Vanguard Global Talent Ltd. All rights reserved.</p>
+          <div class="flex flex-wrap items-center gap-space-md">
+            <a
+              class="hover:text-on-primary transition-colors"
+              data-path="privacy-policy"
+              href="#"
+              >Privacy Policy</a
+            ><a
+              class="hover:text-on-primary transition-colors"
+              data-path="terms-of-engagement"
+              href="#"
+              >Terms of Engagement</a
+            ><a
+              class="hover:text-on-primary transition-colors"
+              data-path="modern-slavery-statement"
+              href="#"
+              >Modern Slavery Statement</a
+            ><a class="hover:text-on-primary transition-colors" href="#"
+              >Cookies Settings</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

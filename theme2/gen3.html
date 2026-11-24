@@ -1,0 +1,2102 @@
+<!doctype html>
+
+<html class="dark scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="mobile_tab" name="shell-type" />
+    <title>Vanguard Global Talent — Black Label Edition</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              charcoal: "#101210",
+              deep: "#0B0D0C",
+              "card-dark": "#191C1A",
+              "card-elevated": "#222522",
+              champagne: "#E5C188",
+              "gold-muted": "#C5A46D",
+              "gold-dark": "#513a0c",
+              "ivory-warm": "#E8E5DE",
+              "ivory-light": "#F7F5EF",
+              "text-secondary": "#B9B7B0",
+              "border-subtle": "#343630",
+              surface: "#101210",
+              primary: "#E5C188",
+              "on-primary": "#1b1406",
+              "on-surface": "#E8E5DE",
+              "surface-container": "#191C1A",
+              "surface-container-high": "#222522",
+              "surface-container-lowest": "#0B0D0C",
+            },
+            fontFamily: {
+              serif: ["'EB Garamond'", "Georgia", "serif"],
+              sans: [
+                "'Manrope'",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "sans-serif",
+              ],
+              headline: ["'EB Garamond'", "serif"],
+              body: ["'Manrope'", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer base {
+        html,
+        body {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          background-color: #101210;
+          color: #e8e5de;
+          overflow-x: hidden;
+        }
+        .pb-safe {
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .pt-safe {
+          padding-top: env(safe-area-inset-top, 0px);
+        }
+      }
+
+      .hero-fluid-title {
+        font-size: clamp(2.55rem, 5.2vw + 0.5rem, 5.25rem);
+        line-height: 1.05;
+        letter-spacing: -0.025em;
+      }
+
+      .corridor-dash {
+        stroke-dasharray: 6 5;
+        animation: dashMove 32s linear infinite;
+      }
+
+      @keyframes dashMove {
+        to {
+          stroke-dashoffset: -300;
+        }
+      }
+
+      @keyframes pulseSoft {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.4);
+          opacity: 0.6;
+        }
+      }
+
+      .pulse-pin {
+        animation: pulseSoft 2.8s ease-in-out infinite;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0b0d0c;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #343630;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #e5c188;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-charcoal text-ivory-warm font-body antialiased selection:bg-champagne selection:text-charcoal relative min-h-screen flex flex-col"
+  >
+    <!-- ========================================== -->
+    <!-- HEADER & RESPONSIVE NAVIGATION             -->
+    <!-- ========================================== -->
+    <header
+      class="fixed top-0 w-full z-50 pt-safe bg-[#0B0D0C]/90 backdrop-blur-md border-b border-border-subtle/70 transition-all duration-300"
+    >
+      <!-- Desktop (lg: and up) & Tablet (md: to lg:) -->
+      <div
+        class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between"
+      >
+        <!-- Brand Mark -->
+        <a class="flex items-center gap-3.5 group" href="#">
+          <div
+            class="w-9 h-9 border border-champagne/60 bg-card-dark flex items-center justify-center text-champagne font-headline text-xl group-hover:border-champagne transition-colors"
+          >
+            V
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-headline text-lg sm:text-xl tracking-tight text-ivory-warm leading-none font-medium"
+              >Vanguard Global Talent</span
+            >
+            <span
+              class="text-[0.625rem] tracking-[0.22em] text-champagne uppercase font-medium mt-1"
+              >Black Label Edition • Global Advisory</span
+            >
+          </div>
+        </a>
+        <!-- Desktop Nav Links (lg: and up) -->
+        <nav
+          class="hidden lg:flex items-center gap-8 text-[0.8125rem] tracking-wider uppercase font-medium text-text-secondary"
+        >
+          <a
+            class="text-champagne font-semibold flex items-center gap-1.5 transition-colors relative py-1"
+            href="#"
+          >
+            <span>Home</span>
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-champagne absolute -bottom-1 left-1/2 -translate-x-1/2"
+            ></span>
+          </a>
+          <a class="hover:text-champagne transition-colors py-1" href="#about"
+            >About Us</a
+          >
+          <a
+            class="hover:text-champagne transition-colors py-1"
+            href="#services"
+            >Recruitment Services</a
+          >
+          <a
+            class="hover:text-champagne transition-colors py-1"
+            href="#corridors"
+            >Industries</a
+          >
+          <a
+            class="hover:text-champagne transition-colors py-1"
+            href="#corridors"
+            >Global Opportunities</a
+          >
+          <a class="hover:text-champagne transition-colors py-1" href="#contact"
+            >Contact</a
+          >
+        </nav>
+        <!-- Desktop & Tablet Actions -->
+        <div class="hidden md:flex items-center gap-3 lg:gap-4">
+          <a
+            class="px-3.5 py-2 text-[0.75rem] tracking-[0.14em] uppercase font-semibold text-ivory-warm hover:text-champagne transition-colors"
+            href="#employers-panel"
+            >For Employers</a
+          >
+          <a
+            class="px-3.5 py-2 text-[0.75rem] tracking-[0.14em] uppercase font-semibold text-ivory-warm hover:text-champagne transition-colors"
+            href="#employers-panel"
+            >For Candidates</a
+          >
+          <a
+            class="inline-flex items-center justify-center px-5 py-2.5 bg-champagne text-charcoal font-semibold text-[0.75rem] tracking-[0.16em] uppercase hover:bg-gold-muted transition-colors shadow-sm"
+            href="#contact"
+            >Get in Touch</a
+          >
+        </div>
+        <!-- Mobile / Small Tablet Menu Trigger (< md:) -->
+        <div class="flex items-center gap-2.5 md:hidden">
+          <button
+            aria-label="Toggle Navigation Drawer"
+            class="h-10 px-3 flex items-center gap-2 text-ivory-warm border border-border-subtle bg-card-dark hover:border-champagne transition-colors"
+            onclick="
+              document
+                .getElementById('mobile-drawer')
+                .classList.toggle('hidden')
+            "
+          >
+            <span
+              class="text-[0.6875rem] tracking-widest uppercase font-semibold text-text-secondary"
+              >Menu</span
+            >
+            <span class="material-symbols-outlined text-[19px] text-champagne"
+              >menu</span
+            >
+          </button>
+          <a
+            class="w-10 h-10 border border-border-subtle bg-card-dark flex items-center justify-center text-champagne hover:border-champagne transition-colors"
+            href="#contact"
+          >
+            <span class="material-symbols-outlined text-[18px]">person</span>
+          </a>
+        </div>
+      </div>
+      <!-- Mobile Slide-out Drawer (< md:) -->
+      <div
+        class="hidden md:hidden bg-[#0B0D0C]/98 border-b border-border-subtle px-6 py-6 transition-all"
+        id="mobile-drawer"
+      >
+        <div
+          class="flex items-center justify-between pb-3 mb-4 border-b border-border-subtle/50"
+        >
+          <span
+            class="text-[0.6875rem] tracking-[0.2em] uppercase text-champagne font-semibold"
+            >Executive Navigation</span
+          >
+          <button
+            class="w-8 h-8 flex items-center justify-center text-text-secondary hover:text-champagne"
+            onclick="
+              document.getElementById('mobile-drawer').classList.add('hidden')
+            "
+          >
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-3 font-headline text-lg">
+          <a
+            class="text-champagne flex items-center justify-between py-1.5 border-b border-border-subtle/30"
+            href="#"
+            onclick="
+              document.getElementById('mobile-drawer').classList.add('hidden')
+            "
+            ><span>Home</span
+            ><span class="material-symbols-outlined text-sm"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="text-ivory-warm hover:text-champagne flex items-center justify-between py-1.5 border-b border-border-subtle/30"
+            href="#about"
+            onclick="
+              document.getElementById('mobile-drawer').classList.add('hidden')
+            "
+            ><span>About Us</span
+            ><span class="material-symbols-outlined text-sm"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="text-ivory-warm hover:text-champagne flex items-center justify-between py-1.5 border-b border-border-subtle/30"
+            href="#services"
+            onclick="
+              document.getElementById('mobile-drawer').classList.add('hidden')
+            "
+            ><span>Recruitment Services</span
+            ><span class="material-symbols-outlined text-sm"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="text-ivory-warm hover:text-champagne flex items-center justify-between py-1.5 border-b border-border-subtle/30"
+            href="#corridors"
+            onclick="
+              document.getElementById('mobile-drawer').classList.add('hidden')
+            "
+            ><span>Industries &amp; Corridors</span
+            ><span class="material-symbols-outlined text-sm"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="text-ivory-warm hover:text-champagne flex items-center justify-between py-1.5 border-b border-border-subtle/30"
+            href="#employers-panel"
+            onclick="
+              document.getElementById('mobile-drawer').classList.add('hidden')
+            "
+            ><span>Global Opportunities</span
+            ><span class="material-symbols-outlined text-sm"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="text-ivory-warm hover:text-champagne flex items-center justify-between py-1.5"
+            href="#contact"
+            onclick="
+              document.getElementById('mobile-drawer').classList.add('hidden')
+            "
+            ><span>Contact</span
+            ><span class="material-symbols-outlined text-sm"
+              >north_east</span
+            ></a
+          >
+        </nav>
+        <div
+          class="mt-6 pt-4 border-t border-border-subtle/60 flex flex-col gap-2.5"
+        >
+          <div
+            class="grid grid-cols-2 gap-2 text-center text-xs tracking-wider uppercase font-semibold"
+          >
+            <a
+              class="py-2.5 bg-card-dark border border-border-subtle text-ivory-warm"
+              href="#employers-panel"
+              onclick="
+                document.getElementById('mobile-drawer').classList.add('hidden')
+              "
+              >Employers</a
+            >
+            <a
+              class="py-2.5 bg-card-dark border border-border-subtle text-ivory-warm"
+              href="#employers-panel"
+              onclick="
+                document.getElementById('mobile-drawer').classList.add('hidden')
+              "
+              >Candidates</a
+            >
+          </div>
+          <a
+            class="w-full py-3 bg-champagne text-charcoal text-center text-xs tracking-[0.16em] uppercase font-bold"
+            href="#contact"
+            onclick="
+              document.getElementById('mobile-drawer').classList.add('hidden')
+            "
+            >Get in Touch</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- ========================================== -->
+    <!-- MAIN CONTENT                               -->
+    <!-- ========================================== -->
+    <main class="flex-1 w-full pt-20 pb-20 md:pb-0">
+      <!-- 1. HERO SECTION (EDITORIAL 2-COLUMN) -->
+      <section
+        class="relative w-full bg-charcoal border-b border-border-subtle/60 overflow-hidden pt-10 sm:pt-14 lg:pt-20 pb-16 lg:pb-24 px-5 sm:px-8 lg:px-12"
+      >
+        <!-- Ambient Glow Behind Imagery -->
+        <div
+          class="absolute top-1/4 right-0 w-[480px] h-[480px] bg-champagne/[0.04] blur-[120px] rounded-full pointer-events-none"
+        ></div>
+        <div class="max-w-[1400px] mx-auto w-full">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+          >
+            <!-- Left Column (approx 55% / col-span-7) -->
+            <div class="lg:col-span-7 flex flex-col items-start z-10">
+              <!-- Eyebrow Badge -->
+              <div class="inline-flex items-center gap-2 mb-5">
+                <span class="w-6 h-[1px] bg-champagne"></span>
+                <span
+                  class="text-[0.6875rem] sm:text-xs tracking-[0.24em] uppercase text-champagne font-semibold"
+                  >— VANGUARD BLACK LABEL • GLOBAL TALENT ADVISORY</span
+                >
+              </div>
+              <!-- Fluid Headline -->
+              <h1
+                class="hero-fluid-title font-headline text-ivory-warm font-normal mb-6 text-balance"
+              >
+                Global Talent.<br />
+                <span class="text-champagne italic font-serif"
+                  >Exceptional Opportunities.</span
+                ><br />
+                Worldwide.
+              </h1>
+              <!-- Supporting Paragraph -->
+              <p
+                class="text-text-secondary text-base sm:text-lg lg:text-xl font-light leading-relaxed max-w-2xl mb-9"
+              >
+                Connecting international employers with exceptional talent
+                through trusted recruitment, specialist search, and global
+                workforce mobility.
+              </p>
+              <!-- Side-by-side CTAs -->
+              <div
+                class="flex flex-col sm:flex-row w-full sm:w-auto items-stretch sm:items-center gap-3.5 mb-10"
+              >
+                <a
+                  class="px-8 py-4 bg-champagne text-charcoal font-semibold text-xs tracking-[0.18em] uppercase flex items-center justify-center gap-2 hover:bg-gold-muted transition-colors shadow-lg"
+                  href="#employers-panel"
+                >
+                  <span>Find Opportunities</span>
+                  <span class="material-symbols-outlined text-[17px]"
+                    >arrow_forward</span
+                  >
+                </a>
+                <a
+                  class="px-8 py-4 bg-card-dark text-ivory-warm border border-border-subtle font-semibold text-xs tracking-[0.18em] uppercase flex items-center justify-center gap-2 hover:border-champagne transition-colors"
+                  href="#employers-panel"
+                >
+                  <span>Hire Talent</span>
+                  <span
+                    class="material-symbols-outlined text-[17px] text-champagne"
+                    >north_east</span
+                  >
+                </a>
+              </div>
+              <!-- Trust Indicator Row -->
+              <div
+                class="w-full pt-6 border-t border-border-subtle/80 flex flex-wrap items-center justify-between gap-y-3 gap-x-6 text-xs text-text-secondary"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span class="font-medium text-ivory-warm/90"
+                    >Cross-Border Recruitment</span
+                  >
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span class="font-medium text-ivory-warm/90"
+                    >Specialist Talent Acquisition</span
+                  >
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span class="font-medium text-ivory-warm/90"
+                    >International Workforce Mobility</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Right Column (approx 45% / col-span-5) -->
+            <div class="lg:col-span-5 w-full relative">
+              <div
+                class="relative w-full aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] border border-champagne/30 bg-card-dark p-1.5 group shadow-2xl"
+              >
+                <div class="relative w-full h-full overflow-hidden bg-deep">
+                  <img
+                    alt="Executive boardroom and corridor advisory session"
+                    class="w-full h-full object-cover object-center grayscale-[15%] group-hover:scale-105 transition-transform duration-700 brightness-95"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEE2R_y9duz8SabZurd_aH5QzNF8d1rip9Py505_tDT1jNxO8Jq5vESVUJfvxmD9QyYHf4VTxGx_bd9GXxbA3kQ76mzGGNncCWlxjdjnxlHqlC_vuZM7LZWRSCcfMkovLAb14ws1RPxnc6NabqdlecVtVBr4myL3XmgjfaNJ151eP3j1pNPsdz29chUeWG-HJysGOb8z0wqksu9-EpU5sxYzqbiXVwSpW_UzcNVaY"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-deep/90 via-deep/20 to-transparent pointer-events-none"
+                  ></div>
+                  <!-- Understated Genuine Caption -->
+                  <div
+                    class="absolute bottom-3 left-3 right-3 py-2 px-3 bg-deep/85 backdrop-blur-md border border-border-subtle flex items-center justify-between text-[0.6875rem]"
+                  >
+                    <span
+                      class="text-champagne font-semibold tracking-widest uppercase"
+                      >Executive Boardroom &amp; Corridor Advisory</span
+                    >
+                    <span
+                      class="text-text-secondary tracking-wider uppercase font-medium"
+                      >Mayfair • Zurich • DIFC</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 2. ABOUT SECTION (WARM IVORY CONTRAST) -->
+      <section
+        class="w-full bg-ivory-warm text-charcoal py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12"
+        id="about"
+      >
+        <div class="max-w-[1400px] mx-auto w-full">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center"
+          >
+            <!-- Left: Framed Executive Concourse Image (col-span-5) -->
+            <div class="lg:col-span-5 order-2 lg:order-1">
+              <div
+                class="relative w-full aspect-[4/3] bg-[#D8D4CC] border border-charcoal/15 shadow-xl overflow-hidden group"
+              >
+                <img
+                  alt="Executive traveler with briefcase at international flight terminal"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNeud-JwHAVzCsxinZDZDaWtmbb4xmxQ1Ju-7Q99U0D8M9FAs9Vhh10sJfKQk2tDviNW0DleUuF4bTiwVB7Yh1Q5lwwpUNNMfWClL1x1R5nmRcdYIqW53s2BLHM4VIT1mNdpjEVZrmbdb3_axUf8XVnQMpbsw3a5v6ILveBeaVOArIU5d20aP5xY_uzrsKUx94jH31UkefBgmIE0VRRauqXtBaokXPCaRb4Hj5Uas"
+                />
+                <div
+                  class="absolute bottom-3 left-4 text-charcoal/80 text-[0.6875rem] font-semibold tracking-widest uppercase"
+                >
+                  Cross-Border Advisory Concourse
+                </div>
+              </div>
+            </div>
+            <!-- Right: Editorial Provenance (col-span-7) -->
+            <div
+              class="lg:col-span-7 order-1 lg:order-2 flex flex-col items-start"
+            >
+              <span
+                class="text-xs tracking-[0.24em] uppercase text-charcoal/70 font-semibold mb-3"
+                >01 / Institutional Provenance</span
+              >
+              <h2
+                class="font-headline text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.15] text-charcoal mb-6"
+              >
+                Architecting Corridors of Global Capability.
+              </h2>
+              <div
+                class="space-y-4 text-charcoal/85 text-base sm:text-lg leading-relaxed font-light mb-8 max-w-2xl"
+              >
+                <p>
+                  Vanguard Global Talent operates at the intersection of
+                  sovereign workforce strategy and specialized executive
+                  placement. We bridge high-growth organizations with
+                  exceptional leaders through trusted, cross-border talent
+                  corridors.
+                </p>
+                <p>
+                  Our international mobility frameworks ensure frictionless
+                  immigration governance, cultural calibration, and compensation
+                  alignment across global financial centers and sovereign
+                  markets.
+                </p>
+              </div>
+              <a
+                class="inline-flex items-center gap-2 text-xs tracking-[0.18em] uppercase font-bold text-charcoal border-b-2 border-charcoal pb-1 hover:text-[#513a0c] hover:border-[#513a0c] transition-all group"
+                href="#contact"
+              >
+                <span>Learn More About Our Practice</span>
+                <span
+                  class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 3. RECRUITMENT SERVICES (REFINED 5-MODULE EDITORIAL GRID) -->
+      <section
+        class="w-full bg-deep text-ivory-warm py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 border-b border-border-subtle"
+        id="services"
+      >
+        <div class="max-w-[1400px] mx-auto w-full">
+          <!-- Header -->
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 sm:mb-16"
+          >
+            <div>
+              <span
+                class="text-xs tracking-[0.24em] uppercase text-champagne font-semibold block mb-2"
+                >02 / Core Capabilities</span
+              >
+              <h2
+                class="font-headline text-3xl sm:text-4xl lg:text-5xl font-normal text-ivory-warm"
+              >
+                Recruitment Services &amp; Advisory
+              </h2>
+            </div>
+            <p
+              class="text-text-secondary text-sm sm:text-base max-w-md font-light"
+            >
+              Five calibrated vectors engineered for cross-border leadership,
+              rare technical specialisms, and turnkey workforce deployment.
+            </p>
+          </div>
+          <!-- Asymmetric 3 + 2 balanced grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6"
+          >
+            <!-- Module 01 -->
+            <div
+              class="bg-card-dark p-7 border border-border-subtle hover:border-champagne/70 transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span
+                    class="font-headline text-2xl text-champagne font-semibold"
+                    >01</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-champagne text-[24px] group-hover:scale-110 transition-transform"
+                    >public</span
+                  >
+                </div>
+                <h3
+                  class="font-headline text-xl text-ivory-warm font-normal mb-3"
+                >
+                  International Recruitment
+                </h3>
+                <p
+                  class="text-text-secondary text-sm leading-relaxed font-light"
+                >
+                  Cross-border executive search and senior leadership
+                  acquisition across established and emerging international
+                  corridors. Built for confidential assignments.
+                </p>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-border-subtle/50 text-[0.6875rem] text-champagne uppercase tracking-widest font-semibold flex items-center gap-1"
+              >
+                <span>Executive Mandates</span>
+              </div>
+            </div>
+            <!-- Module 02 -->
+            <div
+              class="bg-card-dark p-7 border border-border-subtle hover:border-champagne/70 transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span
+                    class="font-headline text-2xl text-champagne font-semibold"
+                    >02</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-champagne text-[24px] group-hover:scale-110 transition-transform"
+                    >badge</span
+                  >
+                </div>
+                <h3
+                  class="font-headline text-xl text-ivory-warm font-normal mb-3"
+                >
+                  Overseas Workforce Placement
+                </h3>
+                <p
+                  class="text-text-secondary text-sm leading-relaxed font-light"
+                >
+                  Turnkey mobility and global workforce deployment.
+                  Comprehensive relocation governance, diplomatic visa advisory,
+                  and sovereign market compliance.
+                </p>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-border-subtle/50 text-[0.6875rem] text-champagne uppercase tracking-widest font-semibold flex items-center gap-1"
+              >
+                <span>Global Mobility</span>
+              </div>
+            </div>
+            <!-- Module 03 -->
+            <div
+              class="bg-card-dark p-7 border border-border-subtle hover:border-champagne/70 transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span
+                    class="font-headline text-2xl text-champagne font-semibold"
+                    >03</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-champagne text-[24px] group-hover:scale-110 transition-transform"
+                    >hub</span
+                  >
+                </div>
+                <h3
+                  class="font-headline text-xl text-ivory-warm font-normal mb-3"
+                >
+                  Skilled Talent Acquisition
+                </h3>
+                <p
+                  class="text-text-secondary text-sm leading-relaxed font-light"
+                >
+                  Specialist headhunting for high-demand disciplines in
+                  quantitative finance, advanced technology, energy transition,
+                  and life sciences.
+                </p>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-border-subtle/50 text-[0.6875rem] text-champagne uppercase tracking-widest font-semibold flex items-center gap-1"
+              >
+                <span>Specialist Search</span>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd row: 2 wider balanced modules -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Module 04 -->
+            <div
+              class="bg-card-dark p-7 border border-border-subtle hover:border-champagne/70 transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span
+                    class="font-headline text-2xl text-champagne font-semibold"
+                    >04</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-champagne text-[24px] group-hover:scale-110 transition-transform"
+                    >domain</span
+                  >
+                </div>
+                <h3
+                  class="font-headline text-xl text-ivory-warm font-normal mb-3"
+                >
+                  Employer Recruitment Solutions
+                </h3>
+                <p
+                  class="text-text-secondary text-sm leading-relaxed font-light"
+                >
+                  Retained talent structuring, global compensation benchmarking,
+                  and workforce planning designed to support multinational
+                  organizational scale.
+                </p>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-border-subtle/50 text-[0.6875rem] text-champagne uppercase tracking-widest font-semibold flex items-center gap-1"
+              >
+                <span>Enterprise Partnerships</span>
+              </div>
+            </div>
+            <!-- Module 05 -->
+            <div
+              class="bg-card-dark p-7 border border-border-subtle hover:border-champagne/70 transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span
+                    class="font-headline text-2xl text-champagne font-semibold"
+                    >05</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-champagne text-[24px] group-hover:scale-110 transition-transform"
+                    >vpn_key</span
+                  >
+                </div>
+                <h3
+                  class="font-headline text-xl text-ivory-warm font-normal mb-3"
+                >
+                  Candidate Recruitment Support
+                </h3>
+                <p
+                  class="text-text-secondary text-sm leading-relaxed font-light"
+                >
+                  Confidential career representation and international
+                  relocation advisory for C-suite leaders and specialized
+                  practitioners navigating global moves.
+                </p>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-border-subtle/50 text-[0.6875rem] text-champagne uppercase tracking-widest font-semibold flex items-center gap-1"
+              >
+                <span>Private Representation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 4. GLOBAL OPPORTUNITIES (AUTHENTIC WORLD MAP & CORRIDORS) -->
+      <section
+        class="w-full bg-charcoal text-ivory-warm py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 border-b border-border-subtle"
+        id="corridors"
+      >
+        <div class="max-w-[1400px] mx-auto w-full">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10"
+          >
+            <div>
+              <span
+                class="text-xs tracking-[0.24em] uppercase text-champagne font-semibold block mb-2"
+                >03 / Cross-Border Corridors</span
+              >
+              <h2
+                class="font-headline text-3xl sm:text-4xl lg:text-5xl font-normal text-ivory-warm"
+              >
+                Global Opportunities &amp; Corridors
+              </h2>
+            </div>
+            <p
+              class="text-text-secondary text-sm sm:text-base max-w-md font-light"
+            >
+              Verified mobility arcs connecting institutional talent across
+              EMEA, the Americas, Asia-Pacific, and the Middle East.
+            </p>
+          </div>
+          <!-- Map & Regional Summaries -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Authentic SVG World Map Frame (col-span-8) -->
+            <div
+              class="lg:col-span-8 w-full bg-card-dark border border-border-subtle p-5 sm:p-7 relative shadow-xl overflow-hidden"
+            >
+              <div
+                class="flex items-center justify-between pb-4 mb-4 border-b border-border-subtle text-xs"
+              >
+                <div class="flex items-center gap-2">
+                  <span
+                    class="w-2 h-2 rounded-full bg-champagne pulse-pin"
+                  ></span>
+                  <span
+                    class="font-medium tracking-wider text-ivory-warm uppercase"
+                    >Verified Active Recruitment Corridors</span
+                  >
+                </div>
+                <span
+                  class="text-text-secondary uppercase tracking-widest text-[0.6875rem]"
+                  >Live Network Coordinates</span
+                >
+              </div>
+              <!-- Authentic World Map Vectors with Connections -->
+              <div
+                class="relative w-full aspect-[2/1] min-h-[260px] sm:min-h-[340px] flex items-center justify-center"
+              >
+                <svg
+                  class="w-full h-full"
+                  fill="none"
+                  viewbox="0 0 1000 500"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Continents / World Landmass Outlines (Authentic simplified silhouettes) -->
+                  <!-- North America -->
+                  <path
+                    d="M120 70 L 190 60 L 250 85 L 290 120 L 250 160 L 210 165 L 190 220 L 160 215 L 140 165 L 110 130 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <path
+                    d="M190 220 L 230 260 L 210 280 L 180 240 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <!-- South America -->
+                  <path
+                    d="M240 280 L 320 300 L 330 360 L 280 440 L 245 420 L 235 340 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <!-- Europe -->
+                  <path
+                    d="M470 70 L 530 65 L 560 110 L 520 145 L 470 140 L 450 100 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <!-- British Isles -->
+                  <path
+                    d="M440 90 L 455 85 L 455 110 L 435 110 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <!-- Africa -->
+                  <path
+                    d="M460 160 L 560 160 L 580 230 L 540 340 L 490 340 L 450 240 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <!-- Asia -->
+                  <path
+                    d="M570 70 L 760 60 L 850 110 L 820 200 L 750 210 L 680 240 L 600 170 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <path
+                    d="M660 230 L 710 230 L 700 290 L 660 270 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <!-- Southeast Asia -->
+                  <path
+                    d="M740 240 L 790 240 L 810 300 L 750 310 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <!-- Japan -->
+                  <path
+                    d="M840 140 L 860 135 L 850 180 L 835 170 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <!-- Australia -->
+                  <path
+                    d="M780 340 L 880 340 L 890 410 L 850 440 L 780 410 Z"
+                    fill="#202422"
+                    stroke="#343630"
+                    stroke-width="1"
+                  ></path>
+                  <!-- Flight Arcs / Corridor Connections -->
+                  <!-- NYC (230, 140) to LON (445, 95) -->
+                  <path
+                    class="corridor-dash"
+                    d="M 230 140 Q 330 80 445 95"
+                    fill="none"
+                    stroke="#E5C188"
+                    stroke-width="1.5"
+                  ></path>
+                  <!-- LON (445, 95) to ZRH (485, 115) -->
+                  <path
+                    d="M 445 95 L 485 115"
+                    fill="none"
+                    stroke="#E5C188"
+                    stroke-width="1.8"
+                  ></path>
+                  <!-- ZRH (485, 115) to DXB (600, 195) -->
+                  <path
+                    class="corridor-dash"
+                    d="M 485 115 Q 545 140 600 195"
+                    fill="none"
+                    stroke="#E5C188"
+                    stroke-width="1.5"
+                  ></path>
+                  <!-- DXB (600, 195) to SIN (755, 275) -->
+                  <path
+                    class="corridor-dash"
+                    d="M 600 195 Q 675 220 755 275"
+                    fill="none"
+                    stroke="#E5C188"
+                    stroke-width="1.5"
+                  ></path>
+                  <!-- SIN (755, 275) to TYO (845, 155) -->
+                  <path
+                    class="corridor-dash"
+                    d="M 755 275 Q 815 210 845 155"
+                    fill="none"
+                    stroke="#E5C188"
+                    stroke-width="1.5"
+                  ></path>
+                  <!-- SIN (755, 275) to SYD (870, 395) -->
+                  <path
+                    class="corridor-dash"
+                    d="M 755 275 Q 820 330 870 395"
+                    fill="none"
+                    stroke="#E5C188"
+                    stroke-width="1.5"
+                  ></path>
+                  <!-- Coordinate Nodes & Labels -->
+                  <!-- New York -->
+                  <circle cx="230" cy="140" fill="#E5C188" r="5"></circle>
+                  <circle
+                    class="pulse-pin"
+                    cx="230"
+                    cy="140"
+                    opacity="0.4"
+                    r="10"
+                    stroke="#E5C188"
+                    stroke-width="1"
+                  ></circle>
+                  <text
+                    fill="#E8E5DE"
+                    font-family="'Manrope', sans-serif"
+                    font-size="12"
+                    font-weight="600"
+                    x="215"
+                    y="125"
+                  >
+                    New York
+                  </text>
+                  <!-- London -->
+                  <circle cx="445" cy="95" fill="#E5C188" r="5"></circle>
+                  <circle
+                    class="pulse-pin"
+                    cx="445"
+                    cy="95"
+                    opacity="0.4"
+                    r="9"
+                    stroke="#E5C188"
+                    stroke-width="1"
+                  ></circle>
+                  <text
+                    fill="#E8E5DE"
+                    font-family="'Manrope', sans-serif"
+                    font-size="12"
+                    font-weight="600"
+                    x="430"
+                    y="80"
+                  >
+                    London
+                  </text>
+                  <!-- Zurich -->
+                  <circle cx="485" cy="115" fill="#FFFFFF" r="4"></circle>
+                  <text
+                    fill="#E8E5DE"
+                    font-family="'Manrope', sans-serif"
+                    font-size="11"
+                    font-weight="500"
+                    x="495"
+                    y="118"
+                  >
+                    Zurich
+                  </text>
+                  <!-- Dubai -->
+                  <circle cx="600" cy="195" fill="#E5C188" r="5"></circle>
+                  <circle
+                    class="pulse-pin"
+                    cx="600"
+                    cy="195"
+                    opacity="0.4"
+                    r="9"
+                    stroke="#E5C188"
+                    stroke-width="1"
+                  ></circle>
+                  <text
+                    fill="#E8E5DE"
+                    font-family="'Manrope', sans-serif"
+                    font-size="12"
+                    font-weight="600"
+                    x="612"
+                    y="198"
+                  >
+                    Dubai
+                  </text>
+                  <!-- Singapore -->
+                  <circle cx="755" cy="275" fill="#E5C188" r="5"></circle>
+                  <circle
+                    class="pulse-pin"
+                    cx="755"
+                    cy="275"
+                    opacity="0.4"
+                    r="10"
+                    stroke="#E5C188"
+                    stroke-width="1"
+                  ></circle>
+                  <text
+                    fill="#E8E5DE"
+                    font-family="'Manrope', sans-serif"
+                    font-size="12"
+                    font-weight="600"
+                    x="768"
+                    y="278"
+                  >
+                    Singapore
+                  </text>
+                  <!-- Tokyo -->
+                  <circle cx="845" cy="155" fill="#E5C188" r="4.5"></circle>
+                  <text
+                    fill="#E8E5DE"
+                    font-family="'Manrope', sans-serif"
+                    font-size="11"
+                    font-weight="500"
+                    x="855"
+                    y="158"
+                  >
+                    Tokyo
+                  </text>
+                  <!-- Sydney -->
+                  <circle cx="870" cy="395" fill="#E5C188" r="4.5"></circle>
+                  <text
+                    fill="#E8E5DE"
+                    font-family="'Manrope', sans-serif"
+                    font-size="11"
+                    font-weight="500"
+                    x="880"
+                    y="398"
+                  >
+                    Sydney
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <!-- Regional Corridor Summary Cards (col-span-4) -->
+            <div class="lg:col-span-4 flex flex-col gap-3.5">
+              <div
+                class="p-4 bg-card-dark border border-border-subtle hover:border-champagne/60 transition-colors flex items-center justify-between"
+              >
+                <div class="flex items-start gap-3">
+                  <span class="w-1.5 h-8 bg-champagne shrink-0 mt-0.5"></span>
+                  <div>
+                    <h4 class="text-sm font-semibold text-ivory-warm">
+                      EMEA Corridor
+                    </h4>
+                    <p class="text-xs text-text-secondary mt-0.5">
+                      London • Zurich • Frankfurt • Geneva
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="text-[0.625rem] tracking-wider uppercase font-semibold text-champagne bg-card-elevated border border-border-subtle px-2 py-1"
+                  >Direct</span
+                >
+              </div>
+              <div
+                class="p-4 bg-card-dark border border-border-subtle hover:border-champagne/60 transition-colors flex items-center justify-between"
+              >
+                <div class="flex items-start gap-3">
+                  <span class="w-1.5 h-8 bg-champagne shrink-0 mt-0.5"></span>
+                  <div>
+                    <h4 class="text-sm font-semibold text-ivory-warm">
+                      Americas Hub
+                    </h4>
+                    <p class="text-xs text-text-secondary mt-0.5">
+                      New York • Boston • Toronto • Silicon Valley
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="text-[0.625rem] tracking-wider uppercase font-semibold text-champagne bg-card-elevated border border-border-subtle px-2 py-1"
+                  >Active</span
+                >
+              </div>
+              <div
+                class="p-4 bg-card-dark border border-border-subtle hover:border-champagne/60 transition-colors flex items-center justify-between"
+              >
+                <div class="flex items-start gap-3">
+                  <span class="w-1.5 h-8 bg-champagne shrink-0 mt-0.5"></span>
+                  <div>
+                    <h4 class="text-sm font-semibold text-ivory-warm">
+                      Asia-Pacific Gateway
+                    </h4>
+                    <p class="text-xs text-text-secondary mt-0.5">
+                      Singapore • Tokyo • Hong Kong • Sydney
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="text-[0.625rem] tracking-wider uppercase font-semibold text-champagne bg-card-elevated border border-border-subtle px-2 py-1"
+                  >Priority</span
+                >
+              </div>
+              <div
+                class="p-4 bg-card-dark border border-border-subtle hover:border-champagne/60 transition-colors flex items-center justify-between"
+              >
+                <div class="flex items-start gap-3">
+                  <span class="w-1.5 h-8 bg-champagne shrink-0 mt-0.5"></span>
+                  <div>
+                    <h4 class="text-sm font-semibold text-ivory-warm">
+                      Middle East Hub
+                    </h4>
+                    <p class="text-xs text-text-secondary mt-0.5">
+                      Dubai DIFC • Abu Dhabi ADGM • Riyadh KAFD
+                    </p>
+                  </div>
+                </div>
+                <span
+                  class="text-[0.625rem] tracking-wider uppercase font-semibold text-champagne bg-card-elevated border border-border-subtle px-2 py-1"
+                  >Expanding</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 5. BALANCED AUDIENCE PANELS (EMPLOYERS & CANDIDATES) -->
+      <section class="w-full" id="employers-panel">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-stretch">
+          <!-- PANEL A: FOR EMPLOYERS (Deep Charcoal) -->
+          <div
+            class="w-full bg-[#141715] text-ivory-warm py-16 lg:py-20 px-6 sm:px-10 lg:px-16 flex flex-col justify-between border-b md:border-b-0 md:border-r border-border-subtle"
+          >
+            <div>
+              <span
+                class="text-xs tracking-[0.24em] uppercase text-champagne font-semibold block mb-2"
+                >Client Practice</span
+              >
+              <h2
+                class="font-headline text-3xl sm:text-4xl font-normal text-ivory-warm mb-5"
+              >
+                Talent That Moves Businesses Forward.
+              </h2>
+              <p
+                class="text-text-secondary text-base leading-relaxed font-light mb-8 max-w-xl"
+              >
+                Deploy pre-vetted senior leaders and specialized international
+                teams with verified technical qualifications, cultural
+                alignment, and compliance assurance.
+              </p>
+              <div class="space-y-4 mb-10">
+                <div class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-champagne text-[20px] shrink-0 mt-0.5"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-ivory-warm/90 leading-normal"
+                    ><strong class="text-champagne font-semibold"
+                      >Retained Executive Search:</strong
+                    >
+                    Confidential searches for board, C-suite, and VP-level
+                    mandates.</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-champagne text-[20px] shrink-0 mt-0.5"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-ivory-warm/90 leading-normal"
+                    ><strong class="text-champagne font-semibold"
+                      >Technical Mobility Teams:</strong
+                    >
+                    Complete relocation governance for quantitative, tech, and
+                    engineering teams.</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-champagne text-[20px] shrink-0 mt-0.5"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-ivory-warm/90 leading-normal"
+                    ><strong class="text-champagne font-semibold"
+                      >Cross-Border Compliance:</strong
+                    >
+                    Harmonized employment agreements adhering to jurisdictional
+                    regulations.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              class="w-full py-4 px-6 bg-champagne text-charcoal font-semibold text-xs tracking-[0.18em] uppercase text-center flex items-center justify-center gap-2 hover:bg-gold-muted transition-colors shadow-md"
+              href="#contact"
+            >
+              <span>Initiate Employer Mandate</span>
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <!-- PANEL B: FOR CANDIDATES (Warm Ivory) -->
+          <div
+            class="w-full bg-ivory-warm text-charcoal py-16 lg:py-20 px-6 sm:px-10 lg:px-16 flex flex-col justify-between"
+          >
+            <div>
+              <span
+                class="text-xs tracking-[0.24em] uppercase text-charcoal/70 font-semibold block mb-2"
+                >Executive Portfolio</span
+              >
+              <h2
+                class="font-headline text-3xl sm:text-4xl font-normal text-charcoal mb-5"
+              >
+                Your Ambition Has No Borders.
+              </h2>
+              <p
+                class="text-charcoal/80 text-base leading-relaxed font-light mb-8 max-w-xl"
+              >
+                Access unadvertised global mandates and private career
+                opportunities with tier-one institutions, sovereign funds, and
+                industry leaders worldwide.
+              </p>
+              <div class="space-y-4 mb-10">
+                <div class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-charcoal text-[20px] shrink-0 mt-0.5"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-charcoal leading-normal"
+                    ><strong class="font-semibold text-charcoal"
+                      >Confidential Career Representation:</strong
+                    >
+                    Anonymous profiling without compromising current position
+                    tenure.</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-charcoal text-[20px] shrink-0 mt-0.5"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-charcoal leading-normal"
+                    ><strong class="font-semibold text-charcoal"
+                      >Relocation Advisory:</strong
+                    >
+                    Expatriate housing allowances, schooling criteria, and tax
+                    treaty alignment.</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-charcoal text-[20px] shrink-0 mt-0.5"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-charcoal leading-normal"
+                    ><strong class="font-semibold text-charcoal"
+                      >Executive Structuring:</strong
+                    >
+                    Carry, equity grants, and multi-currency remuneration parity
+                    guidance.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              class="w-full py-4 px-6 bg-charcoal text-ivory-warm font-semibold text-xs tracking-[0.18em] uppercase text-center flex items-center justify-center gap-2 hover:bg-[#202321] transition-colors shadow-md"
+              href="#contact"
+            >
+              <span>Submit Confidential Dossier</span>
+              <span class="material-symbols-outlined text-sm">lock</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- 6. RECRUITMENT PROCESS (4-STAGE TIMELINE) -->
+      <section
+        class="w-full bg-deep text-ivory-warm py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 border-b border-border-subtle"
+      >
+        <div class="max-w-[1400px] mx-auto w-full">
+          <div class="text-left mb-12 sm:mb-16">
+            <span
+              class="text-xs tracking-[0.24em] uppercase text-champagne font-semibold block mb-2"
+              >04 / Engagement Methodology</span
+            >
+            <h2
+              class="font-headline text-3xl sm:text-4xl lg:text-5xl font-normal text-ivory-warm mb-3"
+            >
+              The Vanguard Placement Standard
+            </h2>
+            <p
+              class="text-text-secondary text-sm sm:text-base max-w-xl font-light"
+            >
+              A structured four-stage methodology ensuring precision vetting and
+              zero compliance friction across international lines.
+            </p>
+          </div>
+          <!-- Desktop Horizontal Timeline (>=768px) -->
+          <div class="hidden md:grid md:grid-cols-4 gap-6 relative pt-6">
+            <!-- Champagne Connecting Axis Line -->
+            <div
+              class="absolute top-[38px] left-6 right-6 h-[1px] bg-champagne/40 z-0"
+            ></div>
+            <!-- Stage 01 -->
+            <div
+              class="relative z-10 flex flex-col bg-card-dark p-6 border border-border-subtle hover:border-champagne/70 transition-all"
+            >
+              <div
+                class="w-8 h-8 rounded-none bg-champagne text-charcoal font-bold text-xs flex items-center justify-center mb-5 shadow"
+              >
+                01
+              </div>
+              <span
+                class="text-[0.6875rem] tracking-widest text-champagne uppercase font-semibold mb-1.5"
+                >Stage 01</span
+              >
+              <h3
+                class="font-headline text-lg text-ivory-warm font-medium mb-2.5"
+              >
+                Registration &amp; Assessment
+              </h3>
+              <p class="text-text-secondary text-xs leading-relaxed font-light">
+                In-depth competency profiling, compensation history
+                reconciliation, international mobility qualification, and
+                cultural calibration.
+              </p>
+            </div>
+            <!-- Stage 02 -->
+            <div
+              class="relative z-10 flex flex-col bg-card-dark p-6 border border-border-subtle hover:border-champagne/70 transition-all"
+            >
+              <div
+                class="w-8 h-8 rounded-none bg-champagne text-charcoal font-bold text-xs flex items-center justify-center mb-5 shadow"
+              >
+                02
+              </div>
+              <span
+                class="text-[0.6875rem] tracking-widest text-champagne uppercase font-semibold mb-1.5"
+                >Stage 02</span
+              >
+              <h3
+                class="font-headline text-lg text-ivory-warm font-medium mb-2.5"
+              >
+                Screening &amp; Shortlisting
+              </h3>
+              <p class="text-text-secondary text-xs leading-relaxed font-light">
+                Rigorous technical due diligence, cross-jurisdiction regulatory
+                verification, and presentation of calibrated, vetted candidate
+                dossiers.
+              </p>
+            </div>
+            <!-- Stage 03 -->
+            <div
+              class="relative z-10 flex flex-col bg-card-dark p-6 border border-border-subtle hover:border-champagne/70 transition-all"
+            >
+              <div
+                class="w-8 h-8 rounded-none bg-champagne text-charcoal font-bold text-xs flex items-center justify-center mb-5 shadow"
+              >
+                03
+              </div>
+              <span
+                class="text-[0.6875rem] tracking-widest text-champagne uppercase font-semibold mb-1.5"
+                >Stage 03</span
+              >
+              <h3
+                class="font-headline text-lg text-ivory-warm font-medium mb-2.5"
+              >
+                Interview &amp; Selection
+              </h3>
+              <p class="text-text-secondary text-xs leading-relaxed font-light">
+                Multi-stakeholder interviews coordinated across overlapping time
+                zones, situational leadership case audits, and confidential
+                debriefs.
+              </p>
+            </div>
+            <!-- Stage 04 -->
+            <div
+              class="relative z-10 flex flex-col bg-card-dark p-6 border border-border-subtle hover:border-champagne/70 transition-all"
+            >
+              <div
+                class="w-8 h-8 rounded-none bg-champagne text-charcoal font-bold text-xs flex items-center justify-center mb-5 shadow"
+              >
+                04
+              </div>
+              <span
+                class="text-[0.6875rem] tracking-widest text-champagne uppercase font-semibold mb-1.5"
+                >Stage 04</span
+              >
+              <h3
+                class="font-headline text-lg text-ivory-warm font-medium mb-2.5"
+              >
+                Placement &amp; Onboarding
+              </h3>
+              <p class="text-text-secondary text-xs leading-relaxed font-light">
+                Cross-border contractual closing, visa issuance oversight,
+                relocation coordination, and continuous post-placement
+                integration support.
+              </p>
+            </div>
+          </div>
+          <!-- Mobile Vertical Timeline (<768px) -->
+          <div
+            class="relative flex md:hidden flex-col gap-6 pl-6 border-l-2 border-champagne/40"
+          >
+            <div class="relative">
+              <div
+                class="absolute -left-[31px] top-0 w-3.5 h-3.5 bg-champagne"
+              ></div>
+              <span
+                class="text-[0.6875rem] tracking-widest text-champagne uppercase font-semibold block mb-1"
+                >Stage 01</span
+              >
+              <h3
+                class="font-headline text-lg text-ivory-warm font-medium mb-1"
+              >
+                Registration &amp; Assessment
+              </h3>
+              <p class="text-text-secondary text-xs leading-relaxed font-light">
+                In-depth competency profiling, compensation history
+                reconciliation, and international mobility qualification.
+              </p>
+            </div>
+            <div class="relative">
+              <div
+                class="absolute -left-[31px] top-0 w-3.5 h-3.5 bg-champagne"
+              ></div>
+              <span
+                class="text-[0.6875rem] tracking-widest text-champagne uppercase font-semibold block mb-1"
+                >Stage 02</span
+              >
+              <h3
+                class="font-headline text-lg text-ivory-warm font-medium mb-1"
+              >
+                Screening &amp; Shortlisting
+              </h3>
+              <p class="text-text-secondary text-xs leading-relaxed font-light">
+                Rigorous technical due diligence, cross-jurisdiction regulatory
+                verification, and vetted candidate dossiers.
+              </p>
+            </div>
+            <div class="relative">
+              <div
+                class="absolute -left-[31px] top-0 w-3.5 h-3.5 bg-champagne"
+              ></div>
+              <span
+                class="text-[0.6875rem] tracking-widest text-champagne uppercase font-semibold block mb-1"
+                >Stage 03</span
+              >
+              <h3
+                class="font-headline text-lg text-ivory-warm font-medium mb-1"
+              >
+                Interview &amp; Selection
+              </h3>
+              <p class="text-text-secondary text-xs leading-relaxed font-light">
+                Multi-stakeholder interviews coordinated across overlapping time
+                zones and situational case audits.
+              </p>
+            </div>
+            <div class="relative">
+              <div
+                class="absolute -left-[31px] top-0 w-3.5 h-3.5 bg-champagne"
+              ></div>
+              <span
+                class="text-[0.6875rem] tracking-widest text-champagne uppercase font-semibold block mb-1"
+                >Stage 04</span
+              >
+              <h3
+                class="font-headline text-lg text-ivory-warm font-medium mb-1"
+              >
+                Placement &amp; Onboarding
+              </h3>
+              <p class="text-text-secondary text-xs leading-relaxed font-light">
+                Cross-border contractual closing, visa oversight, and continuous
+                post-placement integration support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 7. WHY CHOOSE VANGUARD (4 CORPORATE PILLARS) -->
+      <section
+        class="w-full bg-charcoal text-ivory-warm py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 border-b border-border-subtle"
+      >
+        <div class="max-w-[1400px] mx-auto w-full">
+          <div class="text-left mb-12 sm:mb-16">
+            <span
+              class="text-xs tracking-[0.24em] uppercase text-champagne font-semibold block mb-2"
+              >05 / The Vanguard Distinction</span
+            >
+            <h2
+              class="font-headline text-3xl sm:text-4xl lg:text-5xl font-normal text-ivory-warm"
+            >
+              Institutional Precision. Uncompromising Delivery.
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="p-6 bg-card-dark border border-border-subtle hover:border-champagne/70 transition-all flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="w-10 h-10 bg-card-elevated flex items-center justify-center text-champagne mb-5"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >workspace_premium</span
+                  >
+                </div>
+                <h3 class="text-base font-semibold text-ivory-warm mb-2.5">
+                  Professional Recruitment Expertise
+                </h3>
+                <p
+                  class="text-text-secondary text-xs sm:text-sm leading-relaxed font-light"
+                >
+                  Experienced search partners personally manage cross-border
+                  searches, ensuring high-touch execution and strategic domain
+                  insight.
+                </p>
+              </div>
+            </div>
+            <div
+              class="p-6 bg-card-dark border border-border-subtle hover:border-champagne/70 transition-all flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="w-10 h-10 bg-card-elevated flex items-center justify-center text-champagne mb-5"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >gavel</span
+                  >
+                </div>
+                <h3 class="text-base font-semibold text-ivory-warm mb-2.5">
+                  Ethical Recruitment Practices
+                </h3>
+                <p
+                  class="text-text-secondary text-xs sm:text-sm leading-relaxed font-light"
+                >
+                  Strict adherence to non-discrimination, absolute
+                  non-disclosure protocols, and full compliance with host and
+                  home nation labor standards.
+                </p>
+              </div>
+            </div>
+            <div
+              class="p-6 bg-card-dark border border-border-subtle hover:border-champagne/70 transition-all flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="w-10 h-10 bg-card-elevated flex items-center justify-center text-champagne mb-5"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >chat</span
+                  >
+                </div>
+                <h3 class="text-base font-semibold text-ivory-warm mb-2.5">
+                  Transparent Communication
+                </h3>
+                <p
+                  class="text-text-secondary text-xs sm:text-sm leading-relaxed font-light"
+                >
+                  Clear milestone telemetry, honest candidate feedback, and
+                  straightforward fee structures without hidden surprises.
+                </p>
+              </div>
+            </div>
+            <div
+              class="p-6 bg-card-dark border border-border-subtle hover:border-champagne/70 transition-all flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="w-10 h-10 bg-card-elevated flex items-center justify-center text-champagne mb-5"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >flight_takeoff</span
+                  >
+                </div>
+                <h3 class="text-base font-semibold text-ivory-warm mb-2.5">
+                  International Workforce Support
+                </h3>
+                <p
+                  class="text-text-secondary text-xs sm:text-sm leading-relaxed font-light"
+                >
+                  Comprehensive relocation assistance, settling-in guidance, and
+                  ongoing pastoral care for professionals crossing international
+                  boundaries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 8. COMMITMENTS & GOVERNANCE VALUES -->
+      <section
+        class="w-full bg-ivory-warm text-charcoal py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12"
+      >
+        <div class="max-w-[1400px] mx-auto w-full">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+          >
+            <!-- Left: Editorial Serif Quote (col-span-5) -->
+            <div class="lg:col-span-5 flex flex-col">
+              <span
+                class="text-xs tracking-[0.24em] uppercase text-charcoal/70 font-semibold mb-3"
+                >Governance Pledge</span
+              >
+              <h2
+                class="font-headline text-3xl sm:text-4xl font-normal leading-tight text-charcoal mb-5"
+              >
+                Uncompromising Integrity in Global Search.
+              </h2>
+              <p
+                class="font-headline italic text-lg sm:text-xl text-charcoal/85 leading-relaxed"
+              >
+                “In an interconnected world, an organization’s competitive
+                horizon is bounded solely by the caliber and integrity of its
+                talent.”
+              </p>
+            </div>
+            <!-- Right: 3 Balanced Commitment Cards (col-span-7) -->
+            <div class="lg:col-span-7 flex flex-col gap-3.5">
+              <div
+                class="p-5 bg-white border border-charcoal/15 shadow-sm flex items-start gap-4"
+              >
+                <span
+                  class="material-symbols-outlined text-charcoal text-[22px] shrink-0 mt-0.5"
+                  >verified_user</span
+                >
+                <div>
+                  <h4 class="font-semibold text-charcoal text-sm">
+                    Discretion &amp; Non-Disclosure
+                  </h4>
+                  <p class="text-charcoal/75 text-xs sm:text-sm mt-1">
+                    Every mandate is executed under bilateral institutional
+                    confidentiality protocols, protecting both employer brand
+                    and candidate reputation.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-5 bg-white border border-charcoal/15 shadow-sm flex items-start gap-4"
+              >
+                <span
+                  class="material-symbols-outlined text-charcoal text-[22px] shrink-0 mt-0.5"
+                  >policy</span
+                >
+                <div>
+                  <h4 class="font-semibold text-charcoal text-sm">
+                    Regulatory Strictness
+                  </h4>
+                  <p class="text-charcoal/75 text-xs sm:text-sm mt-1">
+                    Full compliance across Swiss, UK, EU, and international
+                    cross-border workforce statutes, zero tolerance for
+                    credential ambiguity.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-5 bg-white border border-charcoal/15 shadow-sm flex items-start gap-4"
+              >
+                <span
+                  class="material-symbols-outlined text-charcoal text-[22px] shrink-0 mt-0.5"
+                  >handshake</span
+                >
+                <div>
+                  <h4 class="font-semibold text-charcoal text-sm">
+                    Client Care Commitment
+                  </h4>
+                  <p class="text-charcoal/75 text-xs sm:text-sm mt-1">
+                    Long-term alignment over transactional speed, backing our
+                    retained engagements with proactive onboarding and
+                    integration follow-ups.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 9. CLOSING CALL TO ACTION -->
+      <section
+        class="w-full bg-deep text-ivory-warm py-20 lg:py-28 px-5 sm:px-8 lg:px-12 relative overflow-hidden"
+        id="contact"
+      >
+        <!-- Ambient Glow Behind CTA -->
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-champagne/[0.04] blur-[140px] rounded-full pointer-events-none"
+        ></div>
+        <div
+          class="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center"
+        >
+          <span
+            class="text-xs tracking-[0.24em] uppercase text-champagne font-semibold mb-3"
+            >Global Expansion Starts Here</span
+          >
+          <h2
+            class="font-headline text-3xl sm:text-4xl lg:text-5xl font-normal text-ivory-warm mb-5 leading-tight"
+          >
+            Let’s Build Your Global Workforce Future.
+          </h2>
+          <p
+            class="text-text-secondary text-base sm:text-lg max-w-xl font-light leading-relaxed mb-10"
+          >
+            Whether scaling an international enterprise across new sovereign
+            borders or seeking your next senior executive appointment, our
+            partners are prepared to advise you.
+          </p>
+          <!-- Dual Action Buttons -->
+          <div class="flex flex-col sm:flex-row w-full sm:w-auto gap-4 mb-12">
+            <button
+              class="px-8 py-4 bg-champagne text-charcoal font-semibold text-xs tracking-[0.18em] uppercase flex items-center justify-center gap-2 hover:bg-gold-muted transition-colors shadow-lg"
+              onclick="openBriefing('mandate')"
+            >
+              <span class="material-symbols-outlined text-[17px]"
+                >business_center</span
+              >
+              <span>Hire International Talent</span>
+            </button>
+            <button
+              class="px-8 py-4 bg-card-dark text-ivory-warm border border-border-subtle font-semibold text-xs tracking-[0.18em] uppercase flex items-center justify-center gap-2 hover:border-champagne transition-colors"
+              onclick="openBriefing('dossier')"
+            >
+              <span class="material-symbols-outlined text-[17px] text-champagne"
+                >person_search</span
+              >
+              <span>Explore Opportunities</span>
+            </button>
+          </div>
+          <!-- Realistic Advisory Desk Contact Card -->
+          <div
+            class="w-full max-w-md bg-card-dark border border-border-subtle p-5 text-left flex flex-col gap-1.5 shadow-xl"
+          >
+            <div class="flex items-center justify-between text-xs">
+              <span
+                class="text-champagne font-semibold tracking-widest uppercase text-[0.6875rem]"
+                >Confidential Advisory Desk</span
+              >
+              <span class="w-2 h-2 rounded-full bg-champagne pulse-pin"></span>
+            </div>
+            <div
+              class="text-base sm:text-lg text-ivory-warm font-medium select-all"
+            >
+              advisory@vanguard-global.com
+            </div>
+            <p class="text-text-secondary text-xs font-light">
+              Direct partner response guaranteed within 4 hours across CET / GMT
+              / EST / SGT.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ========================================== -->
+    <!-- CORPORATE 5-COLUMN FOOTER                  -->
+    <!-- ========================================== -->
+    <footer
+      class="w-full bg-[#080908] text-ivory-warm border-t border-border-subtle pt-16 pb-24 md:pb-12 px-5 sm:px-8 lg:px-12"
+    >
+      <div class="max-w-[1400px] mx-auto w-full flex flex-col">
+        <!-- 5-Column Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 pb-12 border-b border-border-subtle/60"
+        >
+          <!-- Col 1: Brand Descriptor -->
+          <div class="lg:col-span-1 sm:col-span-2 lg:col-span-1 flex flex-col">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-8 h-8 border border-champagne bg-card-dark flex items-center justify-center text-champagne font-headline text-lg"
+              >
+                V
+              </div>
+              <div class="flex flex-col">
+                <span
+                  class="font-headline text-base text-ivory-warm font-medium"
+                  >Vanguard Global Talent</span
+                >
+                <span
+                  class="text-[0.5625rem] tracking-[0.2em] text-champagne uppercase font-medium"
+                  >Black Label Edition</span
+                >
+              </div>
+            </div>
+            <p class="text-text-secondary text-xs leading-relaxed font-light">
+              Independent global recruitment and executive search advisory.
+              Bridging premier employers with exceptional leadership worldwide
+              under strict governance.
+            </p>
+          </div>
+          <!-- Col 2: Practice Index -->
+          <div class="flex flex-col gap-2.5 text-xs">
+            <span
+              class="text-ivory-warm font-semibold uppercase tracking-widest text-[0.6875rem] mb-1"
+              >Practice Index</span
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#services"
+              >Cross-Border Search</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#services"
+              >Quantitative &amp; Tech</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#services"
+              >Overseas Deployment</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#services"
+              >Workforce Mobility</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#services"
+              >Board Advisory</a
+            >
+          </div>
+          <!-- Col 3: For Employers -->
+          <div class="flex flex-col gap-2.5 text-xs">
+            <span
+              class="text-ivory-warm font-semibold uppercase tracking-widest text-[0.6875rem] mb-1"
+              >For Employers</span
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#employers-panel"
+              >Retained Search Mandates</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#employers-panel"
+              >Turnkey Relocation Support</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#employers-panel"
+              >Compensation Benchmarking</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#employers-panel"
+              >Compliance Frameworks</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#contact"
+              >Initiate Briefing</a
+            >
+          </div>
+          <!-- Col 4: For Candidates -->
+          <div class="flex flex-col gap-2.5 text-xs">
+            <span
+              class="text-ivory-warm font-semibold uppercase tracking-widest text-[0.6875rem] mb-1"
+              >For Candidates</span
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#employers-panel"
+              >Confidential Representation</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#corridors"
+              >Global Opportunities Map</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#employers-panel"
+              >International Relocation</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#employers-panel"
+              >Executive Remuneration</a
+            >
+            <a
+              class="text-text-secondary hover:text-champagne transition-colors"
+              href="#contact"
+              >Submit Dossier</a
+            >
+          </div>
+          <!-- Col 5: Global Desks -->
+          <div class="flex flex-col gap-2 text-xs">
+            <span
+              class="text-champagne font-semibold uppercase tracking-widest text-[0.6875rem] mb-1"
+              >Global Desks</span
+            >
+            <div class="space-y-1 text-text-secondary font-light">
+              <p>
+                <strong class="text-ivory-warm font-medium">Zurich:</strong>
+                Paradeplatz 8
+              </p>
+              <p>
+                <strong class="text-ivory-warm font-medium">London:</strong>
+                Mayfair Place 4
+              </p>
+              <p>
+                <strong class="text-ivory-warm font-medium">New York:</strong>
+                767 Fifth Avenue
+              </p>
+              <p>
+                <strong class="text-ivory-warm font-medium">Singapore:</strong>
+                Marina Bay Financial Centre
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Legal Bar -->
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 text-[0.6875rem] text-text-secondary"
+        >
+          <div>
+            © 2025 VANGUARD GLOBAL TALENT ADVISORY. ALL RIGHTS RESERVED.
+          </div>
+          <div
+            class="flex flex-wrap items-center gap-5 uppercase tracking-wider font-medium"
+          >
+            <a class="hover:text-champagne transition-colors" href="#"
+              >Privacy Policy</a
+            >
+            <span>•</span>
+            <a class="hover:text-champagne transition-colors" href="#"
+              >Terms of Service</a
+            >
+            <span>•</span>
+            <a class="hover:text-champagne transition-colors" href="#"
+              >Modern Slavery Statement</a
+            >
+            <span>•</span>
+            <span class="text-champagne font-semibold">BLACK LABEL 2.0</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ========================================== -->
+    <!-- APPROVED FIXED MOBILE BOTTOM TAB BAR       -->
+    <!-- ========================================== -->
+    <nav
+      class="fixed bottom-0 w-full z-40 pb-safe bg-[#0B0D0C]/95 backdrop-blur-xl border-t border-border-subtle md:hidden shadow-[0_-2px_12px_rgba(0,0,0,0.6)]"
+    >
+      <div class="flex justify-around items-center h-16 px-1">
+        <a
+          class="flex flex-col items-center justify-center gap-1 min-w-[48px] py-1 text-champagne font-semibold transition-colors"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-[20px]">hub</span>
+          <span class="text-[0.625rem] uppercase tracking-wider">Home</span>
+        </a>
+        <a
+          class="flex flex-col items-center justify-center gap-1 min-w-[48px] py-1 text-text-secondary hover:text-champagne transition-colors"
+          href="#services"
+        >
+          <span class="material-symbols-outlined text-[20px]"
+            >workspace_premium</span
+          >
+          <span class="text-[0.625rem] uppercase tracking-wider">Services</span>
+        </a>
+        <a
+          class="flex flex-col items-center justify-center gap-1 min-w-[48px] py-1 text-text-secondary hover:text-champagne transition-colors"
+          href="#corridors"
+        >
+          <span class="material-symbols-outlined text-[20px]">public</span>
+          <span class="text-[0.625rem] uppercase tracking-wider"
+            >Corridors</span
+          >
+        </a>
+        <a
+          class="flex flex-col items-center justify-center gap-1 min-w-[48px] py-1 text-text-secondary hover:text-champagne transition-colors"
+          href="#employers-panel"
+        >
+          <span class="material-symbols-outlined text-[20px]">domain</span>
+          <span class="text-[0.625rem] uppercase tracking-wider">Mandates</span>
+        </a>
+        <a
+          class="flex flex-col items-center justify-center gap-1 min-w-[48px] py-1 text-text-secondary hover:text-champagne transition-colors"
+          href="#contact"
+        >
+          <span class="material-symbols-outlined text-[20px]">mail</span>
+          <span class="text-[0.625rem] uppercase tracking-wider">Contact</span>
+        </a>
+      </div>
+    </nav>
+    <!-- ========================================== -->
+    <!-- INTERACTIVE MODAL                          -->
+    <!-- ========================================== -->
+    <div
+      class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4"
+      id="briefing-modal"
+    >
+      <div
+        class="w-full max-w-md bg-card-dark border border-champagne/40 p-6 sm:p-8 text-ivory-warm shadow-2xl relative"
+      >
+        <div
+          class="flex items-center justify-between pb-3 mb-4 border-b border-border-subtle"
+        >
+          <span
+            class="text-xs tracking-[0.2em] uppercase text-champagne font-semibold"
+            id="modal-title"
+            >Confidential Initiation</span
+          >
+          <button
+            class="w-8 h-8 flex items-center justify-center text-text-secondary hover:text-champagne"
+            onclick="
+              document.getElementById('briefing-modal').classList.add('hidden')
+            "
+          >
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+        <p
+          class="text-xs sm:text-sm text-text-secondary leading-relaxed mb-5"
+          id="modal-desc"
+        >
+          Please provide your corporate or personal correspondence address. A
+          managing partner will contact you under mutual non-disclosure.
+        </p>
+        <div class="space-y-3 mb-6">
+          <input
+            class="w-full bg-deep border border-border-subtle p-3 text-xs sm:text-sm text-ivory-warm placeholder-text-secondary/60 focus:outline-none focus:border-champagne"
+            id="modal-email"
+            placeholder="executive@enterprise.com"
+            type="email"
+          />
+          <select
+            class="w-full bg-deep border border-border-subtle p-3 text-xs sm:text-sm text-ivory-warm focus:outline-none focus:border-champagne"
+          >
+            <option>Select Region of Interest</option>
+            <option>EMEA (London / Zurich / Geneva)</option>
+            <option>Americas (New York / Silicon Valley)</option>
+            <option>Asia-Pacific (Singapore / Tokyo / Sydney)</option>
+            <option>Middle East (Dubai / Abu Dhabi / Riyadh)</option>
+          </select>
+        </div>
+        <button
+          class="w-full py-3.5 bg-champagne text-charcoal font-semibold text-xs tracking-[0.18em] uppercase hover:bg-gold-muted transition-colors"
+          onclick="submitModal()"
+        >
+          Confirm Transmission
+        </button>
+      </div>
+    </div>
+    <!-- Vanilla JS Interaction Script -->
+    <script>
+      function openBriefing(type) {
+        const modal = document.getElementById("briefing-modal");
+        const title = document.getElementById("modal-title");
+        const desc = document.getElementById("modal-desc");
+        if (type === "mandate") {
+          title.innerText = "Initiate Employer Mandate";
+          desc.innerText =
+            "Specify your corporate requirements. A Senior Partner will initiate confidential consultation under bilateral NDA.";
+        } else {
+          title.innerText = "Submit Confidential Dossier";
+          desc.innerText =
+            "Transmit executive credentials for unadvertised opportunities in Zurich, London, NYC, Singapore, and Dubai.";
+        }
+        modal.classList.remove("hidden");
+      }
+
+      function submitModal() {
+        const title = document.getElementById("modal-title");
+        const desc = document.getElementById("modal-desc");
+        title.innerText = "Transmission Confirmed";
+        desc.innerText =
+          "Your reference code #VGT-2025 has been logged. An advisory partner will reach out discreetly.";
+        setTimeout(() => {
+          document.getElementById("briefing-modal").classList.add("hidden");
+        }, 1600);
+      }
+    </script>
+  </body>
+</html>

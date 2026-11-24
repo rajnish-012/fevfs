@@ -1,0 +1,2290 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="mobile_tab" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#c8c6c1",
+              "surface-container-low": "#1a1c1b",
+              "on-tertiary-fixed-variant": "#434845",
+              "on-primary-container": "#513a0c",
+              "tertiary-container": "#a5aaa6",
+              "on-secondary-fixed": "#1b1c18",
+              "on-secondary-container": "#bab8b3",
+              "primary-container": "#c5a46d",
+              "inverse-on-surface": "#2f3130",
+              "surface-container": "#1e201f",
+              "inverse-surface": "#e2e3e0",
+              tertiary: "#c3c8c3",
+              "surface-tint": "#e5c188",
+              "primary-fixed": "#ffdea9",
+              "on-primary": "#422d01",
+              secondary: "#c8c6c1",
+              "on-error": "#690005",
+              "surface-variant": "#333534",
+              "on-surface": "#e2e3e0",
+              "outline-variant": "#4d463a",
+              "on-error-container": "#ffdad6",
+              "on-surface-variant": "#d1c5b6",
+              "surface-container-highest": "#333534",
+              "surface-dim": "#121413",
+              primary: "#e5c188",
+              "primary-fixed-dim": "#e5c188",
+              surface: "#121413",
+              "on-secondary": "#30312d",
+              outline: "#9a8f81",
+              "surface-container-high": "#282a29",
+              "secondary-container": "#494945",
+              error: "#ffb4ab",
+              "error-container": "#93000a",
+              background: "#121413",
+              "inverse-primary": "#755a2a",
+              "on-tertiary-fixed": "#181d1a",
+              "on-tertiary-container": "#3a3f3c",
+              "on-secondary-fixed-variant": "#474743",
+              "surface-container-lowest": "#0d0f0e",
+              "on-primary-fixed": "#271900",
+              "on-primary-fixed-variant": "#5b4315",
+              "tertiary-fixed-dim": "#c3c8c3",
+              "secondary-fixed": "#e4e2dd",
+              "surface-bright": "#383a38",
+              "tertiary-fixed": "#dfe4df",
+              "on-background": "#e2e3e0",
+              "on-tertiary": "#2d322f",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-desktop": "5rem",
+              "space-sm": "0.75rem",
+              "gutter-desktop": "2.5rem",
+              gutter: "1.5rem",
+              "space-lg": "2.5rem",
+              "space-xl": "4rem",
+              margin: "1.25rem",
+              "space-md": "1.5rem",
+              "margin-tablet": "3rem",
+              "space-xs": "0.375rem",
+            },
+            fontFamily: {
+              "title-sm": ["Manrope"],
+              "title-lg": ["Manrope"],
+              "headline-lg": ["EB Garamond"],
+              "display-xl-mobile": ["EB Garamond"],
+              "headline-lg-mobile": ["EB Garamond"],
+              "label-caps": ["Manrope"],
+              "headline-md": ["EB Garamond"],
+              "body-lg": ["Manrope"],
+              "label-num": ["EB Garamond"],
+              "body-sm": ["Manrope"],
+              "display-xl": ["EB Garamond"],
+              "body-md": ["Manrope"],
+            },
+            fontSize: {
+              "title-sm": [
+                "1rem",
+                {
+                  lineHeight: "1.4",
+                  letterSpacing: "0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "title-lg": [
+                "1.25rem",
+                {
+                  lineHeight: "1.4",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-lg": [
+                "3rem",
+                {
+                  lineHeight: "1.15",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-xl-mobile": [
+                "2.75rem",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-lg-mobile": [
+                "2rem",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-caps": [
+                "0.6875rem",
+                { lineHeight: "1", letterSpacing: "0.18em", fontWeight: "600" },
+              ],
+              "headline-md": [
+                "2rem",
+                {
+                  lineHeight: "1.25",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-lg": [
+                "1.125rem",
+                { lineHeight: "1.7", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "label-num": [
+                "1.125rem",
+                { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "400" },
+              ],
+              "body-sm": [
+                "0.8125rem",
+                {
+                  lineHeight: "1.5",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-xl": [
+                "4.5rem",
+                {
+                  lineHeight: "1.05",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-md": [
+                "0.9375rem",
+                {
+                  lineHeight: "1.65",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer base {
+        html,
+        body {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          background-color: #121413;
+          color: #e2e3e0;
+          overscroll-behavior-y: none;
+        }
+        .pb-safe {
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .pt-safe {
+          padding-top: env(safe-area-inset-top, 0px);
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen antialiased selection:bg-primary-container selection:text-on-primary-fixed"
+  >
+    <header
+      class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.5)]"
+    >
+      <!-- Mobile Header Bar (<768px) -->
+      <div class="h-16 px-margin flex items-center justify-between md:hidden">
+        <div class="flex items-center gap-space-xs">
+          <img
+            alt="Vanguard Global Talent Minimalist Wordmark Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/ALJJyrCJKCcjxkWv5roCForUcGsh0R6nBKlli4E_zylZkMgQXw3zr1Aa7ecrtngJMa2ANgaxfwamgRjBsHd4bcn0oYLS6hyyHWmLl4pwC9j0WVhSmera4c4egPnq-SJuOb96pWkuhM0UUGqVdb9oAxdMTBgVWHiI_ja9g0XlSN2A7ioMiID5wxHIzE6yah-343hnSp3udsTyB1UG3QmqEBcgm7j3MtJXZA2CAm52klFl2bw"
+          />
+          <div class="flex flex-col ml-1">
+            <span
+              class="font-label-caps text-label-caps tracking-[0.22em] text-primary uppercase"
+              >Black Label</span
+            >
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button
+            aria-label="Toggle Executive Menu"
+            class="h-11 px-3 flex items-center gap-2 text-on-surface hover:text-primary transition-colors"
+            id="executive-menu-trigger"
+            onclick="
+              document
+                .getElementById('mobile-drawer')
+                .classList.toggle('hidden')
+            "
+          >
+            <span
+              class="font-label-caps text-label-caps uppercase text-on-surface-variant"
+              >Menu</span
+            >
+            <span class="material-symbols-outlined text-[20px] text-primary"
+              >menu</span
+            >
+          </button>
+          <div
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"
+          >
+            <span class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Desktop & Tablet Header Bar (>=768px) -->
+      <div
+        class="hidden md:flex items-center justify-between h-20 px-6 lg:px-12 max-w-7xl mx-auto w-full border-b border-surface-container-high/60"
+      >
+        <!-- Logo & Descriptor -->
+        <div class="flex items-center gap-4">
+          <img
+            alt="Vanguard Global Talent Logo"
+            class="h-9 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/ALJJyrCJKCcjxkWv5roCForUcGsh0R6nBKlli4E_zylZkMgQXw3zr1Aa7ecrtngJMa2ANgaxfwamgRjBsHd4bcn0oYLS6hyyHWmLl4pwC9j0WVhSmera4c4egPnq-SJuOb96pWkuhM0UUGqVdb9oAxdMTBgVWHiI_ja9g0XlSN2A7ioMiID5wxHIzE6yah-343hnSp3udsTyB1UG3QmqEBcgm7j3MtJXZA2CAm52klFl2bw"
+          />
+          <div class="h-6 w-[1px] bg-outline-variant/40 hidden lg:block"></div>
+          <div class="hidden lg:flex flex-col">
+            <span
+              class="font-label-caps text-[0.6875rem] tracking-[0.22em] text-primary uppercase font-semibold"
+              >Black Label</span
+            >
+            <span
+              class="font-label-caps text-[0.5625rem] tracking-[0.18em] text-on-surface-variant uppercase"
+              >Global Talent Advisory</span
+            >
+          </div>
+        </div>
+        <!-- Desktop Nav Links -->
+        <nav
+          class="hidden lg:flex items-center gap-7 text-[0.8125rem] tracking-wider uppercase font-medium text-on-surface-variant"
+        >
+          <a
+            class="text-primary hover:text-primary transition-colors py-1 border-b-2 border-primary font-semibold"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="hover:text-primary transition-colors py-1 border-b-2 border-transparent"
+            href="#about"
+            >About Us</a
+          >
+          <a
+            class="hover:text-primary transition-colors py-1 border-b-2 border-transparent"
+            href="#services"
+            >Recruitment Services</a
+          >
+          <a
+            class="hover:text-primary transition-colors py-1 border-b-2 border-transparent"
+            href="#corridors"
+            >Industries &amp; Corridors</a
+          >
+          <a
+            class="hover:text-primary transition-colors py-1 border-b-2 border-transparent"
+            href="#employers-panel"
+            >Global Opportunities</a
+          >
+          <a
+            class="hover:text-primary transition-colors py-1 border-b-2 border-transparent"
+            href="#contact"
+            >Contact</a
+          >
+        </nav>
+        <!-- Desktop Actions & CTAs -->
+        <div class="flex items-center gap-3 lg:gap-4">
+          <a
+            class="hidden md:inline-flex items-center px-3 py-2 text-[0.75rem] font-label-caps uppercase tracking-wider text-on-surface hover:text-primary transition-colors"
+            href="#employers-panel"
+            >For Employers</a
+          >
+          <a
+            class="hidden md:inline-flex items-center px-3 py-2 text-[0.75rem] font-label-caps uppercase tracking-wider text-on-surface hover:text-primary transition-colors"
+            href="#employers-panel"
+            >For Candidates</a
+          >
+          <a
+            class="inline-flex items-center justify-center px-4 lg:px-5 py-2.5 bg-primary text-on-primary font-label-caps text-[0.75rem] uppercase tracking-widest font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md"
+            href="#contact"
+            >Get in Touch</a
+          >
+        </div>
+      </div>
+      <!-- Mobile Drawer (<768px only) -->
+      <div
+        class="hidden md:hidden w-full bg-surface-container-lowest/95 backdrop-blur-2xl px-margin py-space-md transition-all duration-300 shadow-[0_12px_24px_rgba(0,0,0,0.8)]"
+        id="mobile-drawer"
+      >
+        <div class="flex items-center justify-between pb-space-xs mb-space-sm">
+          <span
+            class="font-label-caps text-label-caps text-primary uppercase tracking-widest"
+            >Sovereign Advisory Navigation</span
+          >
+          <button
+            class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary"
+            onclick="
+              document.getElementById('mobile-drawer').classList.add('hidden')
+            "
+          >
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+        <nav
+          class="flex flex-col gap-1"
+          data-active-classes="text-primary font-title-sm"
+        >
+          <a
+            aria-current="page"
+            class="flex items-center justify-between py-2 text-primary font-title-sm"
+            data-path="global-executive-hub"
+            href="#"
+            ><span class="font-headline-md text-title-lg tracking-wide"
+              >Home</span
+            ><span class="material-symbols-outlined text-[16px] text-outline"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="flex items-center justify-between py-2 text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm"
+            data-path="about-us"
+            href="#"
+            ><span class="font-headline-md text-title-lg tracking-wide"
+              >About Us</span
+            ><span class="material-symbols-outlined text-[16px] text-outline"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="flex items-center justify-between py-2 text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm"
+            data-path="recruitment-services"
+            href="#"
+            ><span class="font-headline-md text-title-lg tracking-wide"
+              >Recruitment Services</span
+            ><span class="material-symbols-outlined text-[16px] text-outline"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="flex items-center justify-between py-2 text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm"
+            data-path="industries-practice"
+            href="#"
+            ><span class="font-headline-md text-title-lg tracking-wide"
+              >Industries</span
+            ><span class="material-symbols-outlined text-[16px] text-outline"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="flex items-center justify-between py-2 text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm"
+            data-path="global-opportunities"
+            href="#"
+            ><span class="font-headline-md text-title-lg tracking-wide"
+              >Global Opportunities</span
+            ><span class="material-symbols-outlined text-[16px] text-outline"
+              >north_east</span
+            ></a
+          >
+          <a
+            class="flex items-center justify-between py-2 text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm"
+            data-path="contact-briefing"
+            href="#"
+            ><span class="font-headline-md text-title-lg tracking-wide"
+              >Contact</span
+            ><span class="material-symbols-outlined text-[16px] text-outline"
+              >north_east</span
+            ></a
+          >
+        </nav>
+        <div class="mt-space-md pt-space-sm flex flex-col gap-2.5">
+          <div class="grid grid-cols-2 gap-2">
+            <a
+              class="flex items-center justify-center py-3 px-2 bg-surface-container text-on-surface font-label-caps text-label-caps uppercase tracking-wider text-center hover:bg-surface-bright transition-colors"
+              data-path="employer-mandates"
+              href="#"
+              >For Employers</a
+            >
+            <a
+              class="flex items-center justify-center py-3 px-2 bg-surface-container text-on-surface font-label-caps text-label-caps uppercase tracking-wider text-center hover:bg-surface-bright transition-colors"
+              data-path="candidate-dossier"
+              href="#"
+              >For Candidates</a
+            >
+          </div>
+          <a
+            class="flex items-center justify-center w-full py-3.5 bg-primary-container text-on-primary-fixed font-label-caps text-label-caps uppercase tracking-widest text-center hover:bg-primary transition-colors"
+            data-path="contact-briefing"
+            href="#"
+            >Get in Touch</a
+          >
+        </div>
+      </div>
+    </header>
+    <main
+      class="flex-1 flex flex-col relative w-full pt-16 md:pt-20 bg-surface pb-28 md:pb-12"
+    >
+      <div class="flex flex-col w-full">
+        <!-- ========================================== -->
+        <!-- 1. HERO SECTION (HAUTE EDITORIAL SPLIT)   -->
+        <!-- ========================================== -->
+        <section
+          class="relative w-full overflow-hidden bg-surface-container-lowest pt-4 md:pt-14 pb-12 md:pb-20 px-margin md:px-8 lg:px-12"
+        >
+          <!-- Subtle Background Ambient Geometry -->
+          <div class="absolute inset-0 pointer-events-none opacity-20">
+            <div
+              class="w-72 md:w-96 h-72 md:h-96 rounded-full bg-primary/10 blur-[80px] -top-10 -right-10 absolute"
+            ></div>
+            <div
+              class="w-80 md:w-[32rem] h-80 md:h-[32rem] rounded-full bg-surface-container-high/40 blur-[100px] bottom-0 left-[-40px] absolute"
+            ></div>
+          </div>
+          <div class="max-w-7xl mx-auto w-full relative z-10">
+            <!-- Responsive Grid: Mobile stacked, Tablet/Desktop 12-col split -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center"
+            >
+              <!-- Left Column (col-span-7 on desktop) -->
+              <div class="md:col-span-7 flex flex-col items-start">
+                <!-- Editorial Sub-Kicker -->
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="w-5 h-[1px] bg-primary"></span>
+                  <span
+                    class="font-label-caps text-label-caps uppercase text-primary tracking-[0.22em]"
+                    >Vanguard Black Label • Global Talent Advisory</span
+                  >
+                </div>
+                <!-- Monumental Typography -->
+                <h1
+                  class="font-display-xl-mobile md:text-[3.25rem] lg:text-[4.25rem] xl:text-[4.75rem] text-on-surface leading-[1.06] mb-5 tracking-tight font-headline-lg"
+                >
+                  Global Talent. <br />
+                  <span class="italic text-primary font-normal font-headline-lg"
+                    >Exceptional Opportunities.</span
+                  ><br />
+                  Worldwide.
+                </h1>
+                <p
+                  class="font-body-md text-body-md md:text-body-lg text-on-surface-variant max-w-xl leading-relaxed mb-8"
+                >
+                  Connecting international employers with vetted leaders and
+                  skilled talent through sovereign recruitment frameworks and
+                  bespoke workforce mobility.
+                </p>
+                <!-- CTAs: Mobile Stack, Tablet/Desktop Row -->
+                <div
+                  class="flex flex-col sm:flex-row w-full sm:w-auto gap-3.5 mb-8"
+                >
+                  <a
+                    class="w-full sm:w-auto py-3.5 px-7 bg-primary text-on-primary font-label-caps text-label-caps tracking-[0.16em] uppercase text-center font-semibold shadow-md active:opacity-90 hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2"
+                    href="#employers-panel"
+                  >
+                    <span>Find Opportunities</span>
+                    <span class="material-symbols-outlined text-[16px]"
+                      >north_east</span
+                    >
+                  </a>
+                  <a
+                    class="w-full sm:w-auto py-3.5 px-7 bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-[0.16em] uppercase text-center border border-outline-variant hover:border-primary transition-colors flex items-center justify-center gap-2"
+                    href="#employers-panel"
+                  >
+                    <span>Hire Talent</span>
+                    <span
+                      class="material-symbols-outlined text-[16px] text-primary"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+                <!-- Micro-Stats Pill Row (Integrated nicely) -->
+                <div
+                  class="w-full bg-surface-container-low p-3.5 lg:p-4 flex flex-wrap items-center justify-between gap-y-2 border border-surface-container-high/50"
+                >
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-primary"
+                      >verified</span
+                    >
+                    <span class="font-body-sm text-body-sm text-on-surface"
+                      >Cross-Border Placements</span
+                    >
+                  </div>
+                  <div
+                    class="w-1 h-1 rounded-full bg-outline-variant hidden sm:block"
+                  ></div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-primary"
+                      >workspace_premium</span
+                    >
+                    <span class="font-body-sm text-body-sm text-on-surface"
+                      >C-Suite &amp; Specialist Mandates</span
+                    >
+                  </div>
+                  <div
+                    class="w-1 h-1 rounded-full bg-outline-variant hidden sm:block"
+                  ></div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-primary"
+                      >flight_takeoff</span
+                    >
+                    <span class="font-body-sm text-body-sm text-on-surface"
+                      >International Mobility</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Right Column (col-span-5 on desktop): Cinematic Imagery -->
+              <div class="md:col-span-5 w-full">
+                <div
+                  class="relative w-full aspect-[4/3] md:aspect-[5/4] lg:aspect-[4/3] bg-surface-container overflow-hidden shadow-2xl border border-primary/20"
+                >
+                  <img
+                    alt="International executive leadership team in high-rise boardroom overlooking London twilight"
+                    class="w-full h-full object-cover grayscale-[20%] contrast-110 hover:scale-105 transition-transform duration-700"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEE2R_y9duz8SabZurd_aH5QzNF8d1rip9Py505_tDT1jNxO8Jq5vESVUJfvxmD9QyYHf4VTxGx_bd9GXxbA3kQ76mzGGNncCWlxjdjnxlHqlC_vuZM7LZWRSCcfMkovLAb14ws1RPxnc6NabqdlecVtVBr4myL3XmgjfaNJ151eP3j1pNPsdz29chUeWG-HJysGOb8z0wqksu9-EpU5sxYzqbiXVwSpW_UzcNVaY"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent pointer-events-none"
+                  ></div>
+                  <!-- Overlaid Metadata Badge -->
+                  <div
+                    class="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3 py-2 bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/30"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"
+                      ></span>
+                      <span
+                        class="font-label-caps text-[0.625rem] md:text-[0.6875rem] text-primary uppercase tracking-widest"
+                        >Sovereign Session 2025</span
+                      >
+                    </div>
+                    <span
+                      class="font-label-caps text-[0.625rem] md:text-[0.6875rem] text-on-surface-variant uppercase tracking-wider"
+                      >Paradeplatz • Mayfair • DIFC</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- 2. ABOUT US (EDITORIAL PROVENANCE)        -->
+        <!-- ========================================== -->
+        <section
+          class="w-full bg-secondary-fixed text-on-secondary-fixed py-12 md:py-20 px-margin md:px-8 lg:px-12 relative"
+          id="about"
+        >
+          <div class="max-w-7xl mx-auto w-full">
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-14 items-center"
+            >
+              <!-- Left: Cinematic Image on Desktop (col-span-5) -->
+              <div class="order-2 md:order-1 md:col-span-5 w-full">
+                <div
+                  class="relative w-full aspect-[16/10] md:aspect-[4/3] bg-secondary-fixed-dim overflow-hidden shadow-xl border border-on-secondary-fixed/10"
+                >
+                  <img
+                    alt="Senior global strategist with portfolio case overlooking intercontinental skyline at terminal lounge"
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNeud-JwHAVzCsxinZDZDaWtmbb4xmxQ1Ju-7Q99U0D8M9FAs9Vhh10sJfKQk2tDviNW0DleUuF4bTiwVB7Yh1Q5lwwpUNNMfWClL1x1R5nmRcdYIqW53s2BLHM4VIT1mNdpjEVZrmbdb3_axUf8XVnQMpbsw3a5v6ILveBeaVOArIU5d20aP5xY_uzrsKUx94jH31UkefBgmIE0VRRauqXtBaokXPCaRb4Hj5Uas"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"
+                  ></div>
+                  <div
+                    class="absolute bottom-3 left-4 text-secondary-fixed font-label-caps text-[0.625rem] md:text-[0.6875rem] tracking-widest uppercase"
+                  >
+                    London Heathrow T5 • Concorde Gateway
+                  </div>
+                </div>
+              </div>
+              <!-- Right: Content & Institutional Provenance (col-span-7) -->
+              <div
+                class="order-1 md:order-2 md:col-span-7 flex flex-col items-start"
+              >
+                <div class="flex items-center gap-2 mb-3">
+                  <span
+                    class="font-label-caps text-label-caps text-on-secondary-fixed-variant tracking-[0.22em] uppercase font-semibold"
+                    >01 / Institutional Provenance</span
+                  >
+                </div>
+                <h2
+                  class="font-headline-lg-mobile md:text-[2.75rem] lg:text-[3.25rem] text-on-secondary-fixed font-normal leading-tight mb-4 font-headline-lg"
+                >
+                  Architecting Corridors of Global Capability.
+                </h2>
+                <p
+                  class="font-body-md text-body-md md:text-body-lg text-on-secondary-fixed leading-relaxed mb-6"
+                >
+                  Vanguard Global Talent operates at the intersection of
+                  sovereign workforce strategy and elite international search.
+                  We do not merely fill requisitions; we architect sovereign
+                  talent corridors that transform enterprise resilience across
+                  borders.
+                </p>
+                <!-- Institutional Metric Matrix -->
+                <div
+                  class="grid grid-cols-3 gap-2 md:gap-4 bg-secondary-fixed-dim/40 p-4 lg:p-6 mb-6 w-full border border-on-secondary-fixed/10"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-md md:text-[2.25rem] text-on-secondary-fixed font-normal leading-none mb-1.5"
+                      >48<span
+                        class="text-on-secondary-fixed-variant text-title-sm"
+                        >+</span
+                      ></span
+                    >
+                    <span
+                      class="font-label-caps text-[0.625rem] md:text-[0.6875rem] text-on-secondary-fixed-variant uppercase tracking-wider leading-tight"
+                      >Jurisdictions Served</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col pl-3 lg:pl-6 border-l border-on-secondary-fixed-variant/20"
+                  >
+                    <span
+                      class="font-headline-md md:text-[2.25rem] text-on-secondary-fixed font-normal leading-none mb-1.5"
+                      >98.4<span
+                        class="text-title-sm text-on-secondary-fixed-variant"
+                        >%</span
+                      ></span
+                    >
+                    <span
+                      class="font-label-caps text-[0.625rem] md:text-[0.6875rem] text-on-secondary-fixed-variant uppercase tracking-wider leading-tight"
+                      >Mandate Retention</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col pl-3 lg:pl-6 border-l border-on-secondary-fixed-variant/20"
+                  >
+                    <span
+                      class="font-headline-md md:text-[2.25rem] text-on-secondary-fixed font-normal leading-none mb-1.5"
+                      >14<span
+                        class="text-title-sm text-on-secondary-fixed-variant"
+                        >D</span
+                      ></span
+                    >
+                    <span
+                      class="font-label-caps text-[0.625rem] md:text-[0.6875rem] text-on-secondary-fixed-variant uppercase tracking-wider leading-tight"
+                      >Shortlist Delivery</span
+                    >
+                  </div>
+                </div>
+                <a
+                  class="inline-flex items-center gap-2 font-title-sm text-title-sm text-on-secondary-fixed font-semibold tracking-wide group hover:opacity-80 transition-opacity"
+                  href="#contact"
+                >
+                  <span>Learn More About Our Practice</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- 3. RECRUITMENT SERVICES (FIVE MODULES)     -->
+        <!-- ========================================== -->
+        <section
+          class="w-full bg-surface-container-low text-on-surface py-12 md:py-20 px-margin md:px-8 lg:px-12"
+          id="services"
+        >
+          <div class="max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-4 h-[1px] bg-primary"></span>
+              <span
+                class="font-label-caps text-label-caps text-primary uppercase tracking-[0.22em]"
+                >02 / Core Capabilities</span
+              >
+            </div>
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-4"
+            >
+              <h2
+                class="font-headline-lg-mobile md:text-[2.75rem] text-on-surface font-headline-lg leading-tight"
+              >
+                Bespoke Recruitment &amp; Global Advisory
+              </h2>
+              <p
+                class="font-body-sm md:text-body-md text-on-surface-variant max-w-md"
+              >
+                Five calibrated vectors engineered for cross-border leadership,
+                rare quantitative specialisms, and turnkey mobility.
+              </p>
+            </div>
+            <!-- Services Responsive Grid: 1 col on mobile, 2 on tablet, 3 on desktop with balanced cards -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
+            >
+              <!-- Service 01 -->
+              <div
+                class="bg-surface-container p-5 lg:p-6 transition-all hover:border-primary border border-surface-container-high/60 flex flex-col justify-between group"
+              >
+                <div>
+                  <div class="flex items-start justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="font-label-num text-label-num text-primary font-bold"
+                        >01</span
+                      >
+                      <span
+                        class="font-title-sm text-title-sm text-on-surface font-semibold"
+                        >International Recruitment</span
+                      >
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-[22px] text-primary group-hover:scale-110 transition-transform"
+                      >public</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Cross-border executive search and senior leadership
+                    acquisition across multinational corridors. Built for
+                    non-public market discreet assignments.
+                  </p>
+                </div>
+              </div>
+              <!-- Service 02 -->
+              <div
+                class="bg-surface-container p-5 lg:p-6 transition-all hover:border-primary border border-surface-container-high/60 flex flex-col justify-between group"
+              >
+                <div>
+                  <div class="flex items-start justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="font-label-num text-label-num text-primary font-bold"
+                        >02</span
+                      >
+                      <span
+                        class="font-title-sm text-title-sm text-on-surface font-semibold"
+                        >Overseas Workforce Placement</span
+                      >
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-[22px] text-primary group-hover:scale-110 transition-transform"
+                      >badge</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    End-to-end relocation advisory, diplomatic visa compliance,
+                    and frictionless deployment for technical teams entering new
+                    sovereign territories.
+                  </p>
+                </div>
+              </div>
+              <!-- Service 03 -->
+              <div
+                class="bg-surface-container p-5 lg:p-6 transition-all hover:border-primary border border-surface-container-high/60 flex flex-col justify-between group"
+              >
+                <div>
+                  <div class="flex items-start justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="font-label-num text-label-num text-primary font-bold"
+                        >03</span
+                      >
+                      <span
+                        class="font-title-sm text-title-sm text-on-surface font-semibold"
+                        >Skilled Talent Acquisition</span
+                      >
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-[22px] text-primary group-hover:scale-110 transition-transform"
+                      >hub</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Targeted headhunting for scarce quantitative finance,
+                    advanced engineering, and life science competencies
+                    unavailable in standard local pools.
+                  </p>
+                </div>
+              </div>
+              <!-- Service 04 -->
+              <div
+                class="bg-surface-container p-5 lg:p-6 transition-all hover:border-primary border border-surface-container-high/60 flex flex-col justify-between group md:col-span-1 lg:col-span-1 md:translate-x-0"
+              >
+                <div>
+                  <div class="flex items-start justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="font-label-num text-label-num text-primary font-bold"
+                        >04</span
+                      >
+                      <span
+                        class="font-title-sm text-title-sm text-on-surface font-semibold"
+                        >Employer Recruitment Solutions</span
+                      >
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-[22px] text-primary group-hover:scale-110 transition-transform"
+                      >domain</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Retained bespoke talent pipeline structuring, equity
+                    benchmarking, and cross-border salary matrix alignment for
+                    scaling global entities.
+                  </p>
+                </div>
+              </div>
+              <!-- Service 05 -->
+              <div
+                class="bg-surface-container p-5 lg:p-6 transition-all hover:border-primary border border-surface-container-high/60 flex flex-col justify-between group md:col-span-2 lg:col-span-2"
+              >
+                <div>
+                  <div class="flex items-start justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="font-label-num text-label-num text-primary font-bold"
+                        >05</span
+                      >
+                      <span
+                        class="font-title-sm text-title-sm text-on-surface font-semibold"
+                        >Candidate Dossier Representation</span
+                      >
+                    </div>
+                    <span
+                      class="material-symbols-outlined text-[22px] text-primary group-hover:scale-110 transition-transform"
+                      >vpn_key</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Private advisory for C-suite principals seeking
+                    international relocation, portfolio career transitions, and
+                    confidential compensation negotiation across Tier-1
+                    financial seats.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- 4. GLOBAL OPPORTUNITIES (CORRIDOR MAP)    -->
+        <!-- ========================================== -->
+        <section
+          class="w-full bg-surface-container-lowest text-on-surface py-12 md:py-20 px-margin md:px-8 lg:px-12 relative overflow-hidden"
+          id="corridors"
+        >
+          <div class="max-w-7xl mx-auto w-full relative z-10">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-4 h-[1px] bg-primary"></span>
+              <span
+                class="font-label-caps text-label-caps text-primary uppercase tracking-[0.22em]"
+                >03 / Cross-Border Corridors</span
+              >
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-8"
+            >
+              <div class="md:col-span-5 flex flex-col">
+                <h2
+                  class="font-headline-lg-mobile md:text-[2.75rem] text-on-surface leading-tight mb-3 font-headline-lg"
+                >
+                  Strategic Corridors Across Sovereign Markets
+                </h2>
+                <p
+                  class="font-body-sm md:text-body-md text-on-surface-variant mb-6"
+                >
+                  Dynamic talent mobilization paths interconnecting established
+                  financial hubs and emerging economic epicenters.
+                </p>
+                <div class="hidden md:flex flex-col gap-2.5">
+                  <div
+                    class="p-3 bg-surface-container/70 border border-surface-container-high flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-2.5">
+                      <span class="w-1.5 h-6 bg-primary shrink-0"></span>
+                      <div>
+                        <div
+                          class="font-title-sm text-title-sm text-on-surface"
+                        >
+                          EMEA Corridor
+                        </div>
+                        <div
+                          class="font-body-sm text-[0.75rem] text-on-surface-variant"
+                        >
+                          London • Zurich • Frankfurt • Geneva
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      class="font-label-caps text-[0.625rem] text-primary uppercase bg-surface-container-high px-2 py-1"
+                      >Direct</span
+                    >
+                  </div>
+                  <div
+                    class="p-3 bg-surface-container/70 border border-surface-container-high flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-2.5">
+                      <span class="w-1.5 h-6 bg-primary shrink-0"></span>
+                      <div>
+                        <div
+                          class="font-title-sm text-title-sm text-on-surface"
+                        >
+                          Americas Hub
+                        </div>
+                        <div
+                          class="font-body-sm text-[0.75rem] text-on-surface-variant"
+                        >
+                          New York • Boston • Toronto • Silicon Valley
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      class="font-label-caps text-[0.625rem] text-primary uppercase bg-surface-container-high px-2 py-1"
+                      >Active</span
+                    >
+                  </div>
+                  <div
+                    class="p-3 bg-surface-container/70 border border-surface-container-high flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-2.5">
+                      <span class="w-1.5 h-6 bg-primary shrink-0"></span>
+                      <div>
+                        <div
+                          class="font-title-sm text-title-sm text-on-surface"
+                        >
+                          Asia-Pacific Gateway
+                        </div>
+                        <div
+                          class="font-body-sm text-[0.75rem] text-on-surface-variant"
+                        >
+                          Singapore • Tokyo • Hong Kong • Sydney
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      class="font-label-caps text-[0.625rem] text-primary uppercase bg-surface-container-high px-2 py-1"
+                      >Priority</span
+                    >
+                  </div>
+                  <div
+                    class="p-3 bg-surface-container/70 border border-surface-container-high flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-2.5">
+                      <span class="w-1.5 h-6 bg-primary shrink-0"></span>
+                      <div>
+                        <div
+                          class="font-title-sm text-title-sm text-on-surface"
+                        >
+                          Middle East Hub
+                        </div>
+                        <div
+                          class="font-body-sm text-[0.75rem] text-on-surface-variant"
+                        >
+                          Dubai DIFC • Abu Dhabi ADGM • Riyadh KAFD
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      class="font-label-caps text-[0.625rem] text-primary uppercase bg-surface-container-high px-2 py-1"
+                      >Expanding</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Architectural Map Canvas (col-span-7) -->
+              <div class="md:col-span-7 w-full">
+                <div
+                  class="w-full bg-surface-container-low p-4 lg:p-6 shadow-xl border border-surface-container-high relative"
+                >
+                  <div
+                    class="flex items-center justify-between pb-3 mb-2 border-b border-surface-container-high"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="w-2 h-2 rounded-full bg-primary animate-pulse"
+                      ></span>
+                      <span
+                        class="font-label-caps text-[0.625rem] md:text-[0.6875rem] text-primary tracking-widest uppercase"
+                        >Active Corridors: 4 Active Circuits</span
+                      >
+                    </div>
+                    <span
+                      class="font-label-caps text-[0.625rem] md:text-[0.6875rem] text-on-surface-variant uppercase tracking-wider"
+                      >Live Hub Telemetry</span
+                    >
+                  </div>
+                  <svg
+                    class="w-full h-auto text-primary"
+                    fill="none"
+                    viewbox="0 0 400 210"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M40 70 Q 70 50, 110 55 T 130 90 T 80 130 T 40 70 Z"
+                      fill="#282a29"
+                      opacity="0.45"
+                    ></path>
+                    <path
+                      d="M100 130 Q 120 140, 115 180 T 85 160 Z"
+                      fill="#282a29"
+                      opacity="0.35"
+                    ></path>
+                    <path
+                      d="M180 50 Q 230 40, 240 85 T 195 105 Z"
+                      fill="#282a29"
+                      opacity="0.45"
+                    ></path>
+                    <path
+                      d="M190 110 Q 220 120, 210 170 T 170 140 Z"
+                      fill="#282a29"
+                      opacity="0.35"
+                    ></path>
+                    <path
+                      d="M260 60 Q 330 50, 340 100 T 280 110 Z"
+                      fill="#282a29"
+                      opacity="0.45"
+                    ></path>
+                    <path
+                      d="M300 135 Q 350 140, 335 180 T 290 160 Z"
+                      fill="#282a29"
+                      opacity="0.4"
+                    ></path>
+                    <!-- Arcs / Great Circles -->
+                    <path
+                      d="M95 78 Q 145 35, 192 68"
+                      opacity="0.8"
+                      stroke="#e5c188"
+                      stroke-dasharray="3 3"
+                      stroke-width="1.2"
+                    ></path>
+                    <path
+                      d="M192 68 L 205 75"
+                      stroke="#e5c188"
+                      stroke-width="1.5"
+                    ></path>
+                    <path
+                      d="M192 68 Q 225 75, 245 98"
+                      opacity="0.85"
+                      stroke="#e5c188"
+                      stroke-dasharray="3 3"
+                      stroke-width="1.2"
+                    ></path>
+                    <path
+                      d="M245 98 Q 275 110, 298 128"
+                      opacity="0.9"
+                      stroke="#e5c188"
+                      stroke-dasharray="3 3"
+                      stroke-width="1.2"
+                    ></path>
+                    <path
+                      d="M298 128 Q 320 105, 330 82"
+                      opacity="0.75"
+                      stroke="#e5c188"
+                      stroke-dasharray="3 3"
+                      stroke-width="1.2"
+                    ></path>
+                    <path
+                      d="M298 128 Q 325 150, 332 172"
+                      opacity="0.6"
+                      stroke="#e5c188"
+                      stroke-dasharray="3 3"
+                      stroke-width="1.2"
+                    ></path>
+                    <!-- Nodes -->
+                    <circle cx="95" cy="78" fill="#e5c188" r="4.5"></circle>
+                    <circle
+                      cx="95"
+                      cy="78"
+                      opacity="0.5"
+                      r="7"
+                      stroke="#e5c188"
+                      stroke-width="0.75"
+                    ></circle>
+                    <text
+                      fill="#e2e3e0"
+                      font-family="Manrope"
+                      font-size="7.5"
+                      font-weight="600"
+                      letter-spacing="0.5"
+                      x="85"
+                      y="70"
+                    >
+                      NYC
+                    </text>
+                    <circle cx="192" cy="68" fill="#e5c188" r="4.5"></circle>
+                    <circle
+                      cx="192"
+                      cy="68"
+                      opacity="0.5"
+                      r="7"
+                      stroke="#e5c188"
+                      stroke-width="0.75"
+                    ></circle>
+                    <text
+                      fill="#e2e3e0"
+                      font-family="Manrope"
+                      font-size="7.5"
+                      font-weight="600"
+                      x="180"
+                      y="60"
+                    >
+                      LON
+                    </text>
+                    <circle cx="208" cy="76" fill="#ffffff" r="3"></circle>
+                    <text
+                      fill="#e2e3e0"
+                      font-family="Manrope"
+                      font-size="6"
+                      x="212"
+                      y="74"
+                    >
+                      ZRH
+                    </text>
+                    <circle cx="245" cy="98" fill="#e5c188" r="4"></circle>
+                    <circle
+                      cx="245"
+                      cy="98"
+                      opacity="0.5"
+                      r="6"
+                      stroke="#e5c188"
+                      stroke-width="0.75"
+                    ></circle>
+                    <text
+                      fill="#e2e3e0"
+                      font-family="Manrope"
+                      font-size="7"
+                      font-weight="600"
+                      x="249"
+                      y="97"
+                    >
+                      DXB
+                    </text>
+                    <circle cx="298" cy="128" fill="#e5c188" r="4.5"></circle>
+                    <circle
+                      cx="298"
+                      cy="128"
+                      opacity="0.5"
+                      r="7.5"
+                      stroke="#e5c188"
+                      stroke-width="0.75"
+                    ></circle>
+                    <text
+                      fill="#e2e3e0"
+                      font-family="Manrope"
+                      font-size="7"
+                      font-weight="600"
+                      x="303"
+                      y="132"
+                    >
+                      SIN
+                    </text>
+                    <circle cx="330" cy="82" fill="#e5c188" r="3.5"></circle>
+                    <text
+                      fill="#e2e3e0"
+                      font-family="Manrope"
+                      font-size="6.5"
+                      x="335"
+                      y="84"
+                    >
+                      TYO
+                    </text>
+                    <circle cx="332" cy="172" fill="#e5c188" r="3.5"></circle>
+                    <text
+                      fill="#e2e3e0"
+                      font-family="Manrope"
+                      font-size="6.5"
+                      x="337"
+                      y="174"
+                    >
+                      SYD
+                    </text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- Mobile Corridor Badges (<768px only) -->
+            <div class="flex md:hidden flex-col gap-2.5">
+              <div
+                class="p-3 bg-surface-container flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span class="w-1.5 h-6 bg-primary shrink-0"></span>
+                  <div>
+                    <div class="font-title-sm text-title-sm text-on-surface">
+                      EMEA Corridor
+                    </div>
+                    <div
+                      class="font-body-sm text-[0.75rem] text-on-surface-variant"
+                    >
+                      London • Zurich • Frankfurt • Geneva
+                    </div>
+                  </div>
+                </div>
+                <span
+                  class="font-label-caps text-[0.625rem] text-primary uppercase bg-surface-container-high px-2 py-1"
+                  >Direct</span
+                >
+              </div>
+              <div
+                class="p-3 bg-surface-container flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span class="w-1.5 h-6 bg-primary shrink-0"></span>
+                  <div>
+                    <div class="font-title-sm text-title-sm text-on-surface">
+                      Americas Hub
+                    </div>
+                    <div
+                      class="font-body-sm text-[0.75rem] text-on-surface-variant"
+                    >
+                      New York • Boston • Toronto • Silicon Valley
+                    </div>
+                  </div>
+                </div>
+                <span
+                  class="font-label-caps text-[0.625rem] text-primary uppercase bg-surface-container-high px-2 py-1"
+                  >Active</span
+                >
+              </div>
+              <div
+                class="p-3 bg-surface-container flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span class="w-1.5 h-6 bg-primary shrink-0"></span>
+                  <div>
+                    <div class="font-title-sm text-title-sm text-on-surface">
+                      Asia-Pacific Gateway
+                    </div>
+                    <div
+                      class="font-body-sm text-[0.75rem] text-on-surface-variant"
+                    >
+                      Singapore • Tokyo • Hong Kong • Sydney
+                    </div>
+                  </div>
+                </div>
+                <span
+                  class="font-label-caps text-[0.625rem] text-primary uppercase bg-surface-container-high px-2 py-1"
+                  >Priority</span
+                >
+              </div>
+              <div
+                class="p-3 bg-surface-container flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span class="w-1.5 h-6 bg-primary shrink-0"></span>
+                  <div>
+                    <div class="font-title-sm text-title-sm text-on-surface">
+                      Middle East Hub
+                    </div>
+                    <div
+                      class="font-body-sm text-[0.75rem] text-on-surface-variant"
+                    >
+                      Dubai DIFC • Abu Dhabi ADGM • Riyadh KAFD
+                    </div>
+                  </div>
+                </div>
+                <span
+                  class="font-label-caps text-[0.625rem] text-primary uppercase bg-surface-container-high px-2 py-1"
+                  >Expanding</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- 5. DUAL AUDIENCE SECTIONS (EQUAL WEIGHT)   -->
+        <!-- ========================================== -->
+        <section class="w-full" id="employers-panel">
+          <div class="grid grid-cols-1 md:grid-cols-2 items-stretch">
+            <!-- PANEL A: FOR EMPLOYERS (Deep Charcoal) -->
+            <div
+              class="w-full bg-surface-container-high text-on-surface py-12 md:py-16 px-margin md:px-10 lg:px-16 flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span
+                    class="font-label-caps text-label-caps text-primary uppercase tracking-[0.22em]"
+                    >Client Practice</span
+                  >
+                </div>
+                <h2
+                  class="font-headline-lg-mobile md:text-[2.25rem] lg:text-[2.5rem] text-on-surface mb-4 font-headline-lg"
+                >
+                  Talent That Moves Businesses Forward.
+                </h2>
+                <p
+                  class="font-body-sm md:text-body-md text-on-surface-variant leading-relaxed mb-6"
+                >
+                  Deploy pre-vetted senior leaders and specialized international
+                  teams with guaranteed regulatory compliance and institutional
+                  cultural alignment.
+                </p>
+                <div class="flex flex-col gap-3.5 mb-8">
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5"
+                      >check_circle</span
+                    >
+                    <span class="font-body-sm text-body-sm text-on-surface"
+                      ><strong class="text-primary font-medium"
+                        >Retained Executive Search:</strong
+                      >
+                      Unadvertised board, C-suite, and VP-level mandates with
+                      zero leakage.</span
+                    >
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5"
+                      >check_circle</span
+                    >
+                    <span class="font-body-sm text-body-sm text-on-surface"
+                      ><strong class="text-primary font-medium"
+                        >Technical Mobility Teams:</strong
+                      >
+                      Complete relocation governance for quantitative and
+                      engineering squads.</span
+                    >
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5"
+                      >check_circle</span
+                    >
+                    <span class="font-body-sm text-body-sm text-on-surface"
+                      ><strong class="text-primary font-medium"
+                        >Compliance Framing:</strong
+                      >
+                      Harmonized employment agreements adhering to host and home
+                      state laws.</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <a
+                class="w-full py-3.5 px-6 bg-primary text-on-primary font-label-caps text-label-caps tracking-[0.16em] uppercase text-center font-semibold flex items-center justify-center gap-2 hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md"
+                href="#contact"
+              >
+                <span>Initiate Employer Mandate</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+            <!-- PANEL B: FOR CANDIDATES (Soft Ivory) -->
+            <div
+              class="w-full bg-secondary-fixed text-on-secondary-fixed py-12 md:py-16 px-margin md:px-10 lg:px-16 flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span
+                    class="font-label-caps text-label-caps text-on-secondary-fixed-variant uppercase tracking-[0.22em]"
+                    >Executive Portfolio</span
+                  >
+                </div>
+                <h2
+                  class="font-headline-lg-mobile md:text-[2.25rem] lg:text-[2.5rem] text-on-secondary-fixed mb-4 font-headline-lg"
+                >
+                  Your Ambition Has No Borders.
+                </h2>
+                <p
+                  class="font-body-sm md:text-body-md text-on-secondary-fixed leading-relaxed mb-6"
+                >
+                  Access unadvertised global mandates and private opportunities
+                  with sovereign wealth funds, tier-one advisories, and
+                  innovative global institutions.
+                </p>
+                <div class="flex flex-col gap-3.5 mb-8">
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="material-symbols-outlined text-on-secondary-fixed text-[18px] shrink-0 mt-0.5"
+                      >check_circle</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-secondary-fixed"
+                      ><strong class="font-medium text-on-secondary-fixed"
+                        >Confidential Representation:</strong
+                      >
+                      Anonymous profiling without compromising current position
+                      tenure.</span
+                    >
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="material-symbols-outlined text-on-secondary-fixed text-[18px] shrink-0 mt-0.5"
+                      >check_circle</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-secondary-fixed"
+                      ><strong class="font-medium text-on-secondary-fixed"
+                        >Relocation Advisory:</strong
+                      >
+                      Expatriate housing allowances, schooling criteria, and tax
+                      treaty alignment.</span
+                    >
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="material-symbols-outlined text-on-secondary-fixed text-[18px] shrink-0 mt-0.5"
+                      >check_circle</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-secondary-fixed"
+                      ><strong class="font-medium text-on-secondary-fixed"
+                        >Executive Structuring:</strong
+                      >
+                      Carry, equity grants, and multi-currency remuneration
+                      parity.</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <a
+                class="w-full py-3.5 px-6 bg-on-secondary-fixed text-secondary-fixed font-label-caps text-label-caps tracking-[0.16em] uppercase text-center font-semibold flex items-center justify-center gap-2 hover:bg-black transition-colors shadow-md"
+                href="#contact"
+              >
+                <span>Submit Confidential Dossier</span>
+                <span class="material-symbols-outlined text-[16px]">lock</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- 6. RECRUITMENT PROCESS (TIMELINE)         -->
+        <!-- ========================================== -->
+        <section
+          class="w-full bg-secondary-fixed-dim/30 text-on-surface py-12 md:py-20 px-margin md:px-8 lg:px-12"
+        >
+          <div class="max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-4 h-[1px] bg-primary"></span>
+              <span
+                class="font-label-caps text-label-caps text-primary uppercase tracking-[0.22em]"
+                >04 / Engagement Methodology</span
+              >
+            </div>
+            <h2
+              class="font-headline-lg-mobile md:text-[2.75rem] text-on-surface mb-2 font-headline-lg"
+            >
+              The Vanguard Placement Standard
+            </h2>
+            <p
+              class="font-body-sm md:text-body-md text-on-surface-variant mb-10 max-w-2xl"
+            >
+              A choreographed four-stage journey ensuring precision vetting and
+              zero compliance friction across international lines.
+            </p>
+            <!-- Mobile Timeline (<768px) -->
+            <div
+              class="relative flex md:hidden flex-col gap-6 pl-6 border-l border-primary/30"
+            >
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-0 w-4 h-4 bg-primary flex items-center justify-center"
+                >
+                  <div class="w-1.5 h-1.5 bg-surface-container-lowest"></div>
+                </div>
+                <div
+                  class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-1"
+                >
+                  Phase 01
+                </div>
+                <h3
+                  class="font-title-sm text-title-sm text-on-surface font-semibold mb-1"
+                >
+                  Registration &amp; Sovereign Audit
+                </h3>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  In-depth competency profiling, compensation history
+                  reconciliation, international mobility qualification, and
+                  cultural calibration.
+                </p>
+              </div>
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-0 w-4 h-4 bg-primary flex items-center justify-center"
+                >
+                  <div class="w-1.5 h-1.5 bg-surface-container-lowest"></div>
+                </div>
+                <div
+                  class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-1"
+                >
+                  Phase 02
+                </div>
+                <h3
+                  class="font-title-sm text-title-sm text-on-surface font-semibold mb-1"
+                >
+                  Multidimensional Screening &amp; Shortlist
+                </h3>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  Rigorous technical due diligence, cross-jurisdiction
+                  regulatory verification, and presentation of a calibrated
+                  3-candidate dossier within 14 days.
+                </p>
+              </div>
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-0 w-4 h-4 bg-primary flex items-center justify-center"
+                >
+                  <div class="w-1.5 h-1.5 bg-surface-container-lowest"></div>
+                </div>
+                <div
+                  class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-1"
+                >
+                  Phase 03
+                </div>
+                <h3
+                  class="font-title-sm text-title-sm text-on-surface font-semibold mb-1"
+                >
+                  Synchronized Global Selection
+                </h3>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  Stakeholder interviews coordinated across overlapping time
+                  zones, situational leadership case audits, and non-disclosure
+                  debriefs.
+                </p>
+              </div>
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-0 w-4 h-4 bg-primary flex items-center justify-center"
+                >
+                  <div class="w-1.5 h-1.5 bg-surface-container-lowest"></div>
+                </div>
+                <div
+                  class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-1"
+                >
+                  Phase 04
+                </div>
+                <h3
+                  class="font-title-sm text-title-sm text-on-surface font-semibold mb-1"
+                >
+                  Placement, Mobility &amp; 365-Day Retention
+                </h3>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                >
+                  Cross-border contractual closing, sovereign visa issuance
+                  oversight, and continuous 12-month post-placement integration
+                  monitoring.
+                </p>
+              </div>
+            </div>
+            <!-- Desktop/Tablet 4-Column Horizontal Stage Grid (>=768px) -->
+            <div class="hidden md:grid md:grid-cols-4 gap-6 relative pt-4">
+              <div
+                class="absolute top-7 left-0 right-0 h-[1px] bg-primary/30 z-0"
+              ></div>
+              <div
+                class="relative z-10 flex flex-col items-start bg-surface-container/60 p-5 border border-surface-container-high hover:border-primary transition-all"
+              >
+                <div
+                  class="w-7 h-7 bg-primary flex items-center justify-center text-on-primary font-bold text-xs mb-4 shadow"
+                >
+                  01
+                </div>
+                <span
+                  class="font-label-caps text-primary uppercase text-[0.625rem] tracking-widest mb-1.5"
+                  >Phase 01</span
+                >
+                <h3 class="font-title-sm text-on-surface font-semibold mb-2">
+                  Registration &amp; Sovereign Audit
+                </h3>
+                <p
+                  class="font-body-sm text-on-surface-variant leading-relaxed text-[0.8125rem]"
+                >
+                  In-depth competency profiling, compensation history
+                  reconciliation, international mobility qualification, and
+                  cultural calibration.
+                </p>
+              </div>
+              <div
+                class="relative z-10 flex flex-col items-start bg-surface-container/60 p-5 border border-surface-container-high hover:border-primary transition-all"
+              >
+                <div
+                  class="w-7 h-7 bg-primary flex items-center justify-center text-on-primary font-bold text-xs mb-4 shadow"
+                >
+                  02
+                </div>
+                <span
+                  class="font-label-caps text-primary uppercase text-[0.625rem] tracking-widest mb-1.5"
+                  >Phase 02</span
+                >
+                <h3 class="font-title-sm text-on-surface font-semibold mb-2">
+                  Multidimensional Screening &amp; Shortlist
+                </h3>
+                <p
+                  class="font-body-sm text-on-surface-variant leading-relaxed text-[0.8125rem]"
+                >
+                  Rigorous technical due diligence, cross-jurisdiction
+                  regulatory verification, and presentation of a calibrated
+                  3-candidate dossier within 14 days.
+                </p>
+              </div>
+              <div
+                class="relative z-10 flex flex-col items-start bg-surface-container/60 p-5 border border-surface-container-high hover:border-primary transition-all"
+              >
+                <div
+                  class="w-7 h-7 bg-primary flex items-center justify-center text-on-primary font-bold text-xs mb-4 shadow"
+                >
+                  03
+                </div>
+                <span
+                  class="font-label-caps text-primary uppercase text-[0.625rem] tracking-widest mb-1.5"
+                  >Phase 03</span
+                >
+                <h3 class="font-title-sm text-on-surface font-semibold mb-2">
+                  Synchronized Global Selection
+                </h3>
+                <p
+                  class="font-body-sm text-on-surface-variant leading-relaxed text-[0.8125rem]"
+                >
+                  Stakeholder interviews coordinated across overlapping time
+                  zones, situational leadership case audits, and non-disclosure
+                  debriefs.
+                </p>
+              </div>
+              <div
+                class="relative z-10 flex flex-col items-start bg-surface-container/60 p-5 border border-surface-container-high hover:border-primary transition-all"
+              >
+                <div
+                  class="w-7 h-7 bg-primary flex items-center justify-center text-on-primary font-bold text-xs mb-4 shadow"
+                >
+                  04
+                </div>
+                <span
+                  class="font-label-caps text-primary uppercase text-[0.625rem] tracking-widest mb-1.5"
+                  >Phase 04</span
+                >
+                <h3 class="font-title-sm text-on-surface font-semibold mb-2">
+                  Placement &amp; 365-Day Retention
+                </h3>
+                <p
+                  class="font-body-sm text-on-surface-variant leading-relaxed text-[0.8125rem]"
+                >
+                  Cross-border contractual closing, sovereign visa issuance
+                  oversight, and continuous 12-month post-placement integration
+                  monitoring.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- 7. WHY CHOOSE US (CORPORATE PILLARS)      -->
+        <!-- ========================================== -->
+        <section
+          class="w-full bg-surface-container-lowest text-on-surface py-12 md:py-20 px-margin md:px-8 lg:px-12"
+        >
+          <div class="max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-4 h-[1px] bg-primary"></span>
+              <span
+                class="font-label-caps text-label-caps text-primary uppercase tracking-[0.22em]"
+                >05 / The Vanguard Distinction</span
+              >
+            </div>
+            <h2
+              class="font-headline-lg-mobile md:text-[2.75rem] text-on-surface leading-tight mb-8 font-headline-lg"
+            >
+              Institutional Precision. Uncompromising Delivery.
+            </h2>
+            <!-- Responsive Grid: 1 col on mobile, 2 col on tablet, 4 col on desktop -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6"
+            >
+              <div
+                class="p-5 lg:p-6 bg-surface-container border border-surface-container-high hover:border-primary transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center gap-2.5 mb-3">
+                    <span
+                      class="material-symbols-outlined text-primary text-[22px]"
+                      >handshake</span
+                    >
+                    <span
+                      class="font-title-sm text-title-sm text-on-surface font-semibold"
+                      >Bilateral Coordination</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Dedicated search principals personally conduct cross-border
+                    consultations rather than delegating to junior associates.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-5 lg:p-6 bg-surface-container border border-surface-container-high hover:border-primary transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center gap-2.5 mb-3">
+                    <span
+                      class="material-symbols-outlined text-primary text-[22px]"
+                      >visibility</span
+                    >
+                    <span
+                      class="font-title-sm text-title-sm text-on-surface font-semibold"
+                      >Transparent Telemetry</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Private executive portals offer real-time tracking of
+                    candidate status, compliance verifications, and interview
+                    progression.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-5 lg:p-6 bg-surface-container border border-surface-container-high hover:border-primary transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center gap-2.5 mb-3">
+                    <span
+                      class="material-symbols-outlined text-primary text-[22px]"
+                      >all_inclusive</span
+                    >
+                    <span
+                      class="font-title-sm text-title-sm text-on-surface font-semibold"
+                      >Proprietary Corridors</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Decades of institutional relationships granting access to
+                    leaders not accessible through conventional recruiting
+                    networks.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-5 lg:p-6 bg-surface-container border border-surface-container-high hover:border-primary transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center gap-2.5 mb-3">
+                    <span
+                      class="material-symbols-outlined text-primary text-[22px]"
+                      >gavel</span
+                    >
+                    <span
+                      class="font-title-sm text-title-sm text-on-surface font-semibold"
+                      >Risk-Mitigated Structuring</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Ironclad adherence to Swiss banking privacy, EU GDPR, and
+                    cross-border labor statutes for completely compliant
+                    deployment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- 8. COMMITMENT & GOVERNANCE VALUES         -->
+        <!-- ========================================== -->
+        <section
+          class="w-full bg-secondary-fixed text-on-secondary-fixed py-12 md:py-20 px-margin md:px-8 lg:px-12"
+        >
+          <div class="max-w-7xl mx-auto w-full">
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center"
+            >
+              <!-- Left: Headline & Quote (col-span-5) -->
+              <div class="md:col-span-5 flex flex-col">
+                <div class="flex items-center gap-2 mb-3">
+                  <span
+                    class="font-label-caps text-label-caps text-on-secondary-fixed-variant tracking-[0.2em] uppercase font-semibold"
+                    >Governance Pledge</span
+                  >
+                </div>
+                <h2
+                  class="font-headline-lg-mobile md:text-[2.5rem] text-on-secondary-fixed mb-4 font-headline-lg leading-tight"
+                >
+                  Uncompromising Integrity in International Search.
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-on-secondary-fixed italic leading-relaxed"
+                >
+                  “In an interconnected world, an organization’s competitive
+                  horizon is bounded solely by the caliber and integrity of its
+                  sovereign leadership.”
+                </p>
+              </div>
+              <!-- Right: 3 Pillars (col-span-7) -->
+              <div class="md:col-span-7 flex flex-col gap-3.5">
+                <div
+                  class="p-4 bg-secondary-fixed-dim/50 flex items-start gap-4 border border-on-secondary-fixed/10"
+                >
+                  <span
+                    class="material-symbols-outlined text-on-secondary-fixed text-[22px] shrink-0 mt-0.5"
+                    >verified_user</span
+                  >
+                  <div>
+                    <div
+                      class="font-title-sm text-title-sm text-on-secondary-fixed font-semibold"
+                    >
+                      Discretion &amp; Non-Disclosure
+                    </div>
+                    <div
+                      class="font-body-sm text-body-sm text-on-secondary-fixed-variant mt-0.5"
+                    >
+                      Every mandate executed under strict institutional
+                      confidentiality protocols.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="p-4 bg-secondary-fixed-dim/50 flex items-start gap-4 border border-on-secondary-fixed/10"
+                >
+                  <span
+                    class="material-symbols-outlined text-on-secondary-fixed text-[22px] shrink-0 mt-0.5"
+                    >policy</span
+                  >
+                  <div>
+                    <div
+                      class="font-title-sm text-title-sm text-on-secondary-fixed font-semibold"
+                    >
+                      Regulatory Strictness
+                    </div>
+                    <div
+                      class="font-body-sm text-body-sm text-on-secondary-fixed-variant mt-0.5"
+                    >
+                      Zero tolerance for credential ambiguity or visa compliance
+                      non-conformity.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="p-4 bg-secondary-fixed-dim/50 flex items-start gap-4 border border-on-secondary-fixed/10"
+                >
+                  <span
+                    class="material-symbols-outlined text-on-secondary-fixed text-[22px] shrink-0 mt-0.5"
+                    >workspace_premium</span
+                  >
+                  <div>
+                    <div
+                      class="font-title-sm text-title-sm text-on-secondary-fixed font-semibold"
+                    >
+                      Retention Warranty
+                    </div>
+                    <div
+                      class="font-body-sm text-body-sm text-on-secondary-fixed-variant mt-0.5"
+                    >
+                      Full placement replacement commitment backing all
+                      certified senior retained searches.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- 9. FINAL CALL TO ACTION (DRAMATIC CHARCOAL)-->
+        <!-- ========================================== -->
+        <section
+          class="w-full bg-surface-container-lowest text-on-surface py-14 md:py-24 px-margin md:px-8 lg:px-12 relative overflow-hidden"
+          id="contact"
+        >
+          <!-- Subtle Gold Lighting Accent -->
+          <div
+            class="absolute -top-16 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[90px] pointer-events-none"
+          ></div>
+          <div
+            class="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto"
+          >
+            <span
+              class="font-label-caps text-label-caps text-primary uppercase tracking-[0.25em] mb-3 font-semibold"
+              >Global Expansion Starts Here</span
+            >
+            <h2
+              class="font-headline-lg-mobile md:text-[3.25rem] text-on-surface mb-4 font-headline-lg leading-tight"
+            >
+              Let’s Make Global Opportunities Happen.
+            </h2>
+            <p
+              class="font-body-md text-body-md md:text-body-lg text-on-surface-variant max-w-xl mb-8"
+            >
+              Whether scaling an international enterprise or seeking your next
+              sovereign executive appointment, our partners are prepared to
+              advise you.
+            </p>
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row w-full sm:w-auto gap-4 mb-10">
+              <button
+                class="w-full sm:w-auto py-3.5 px-8 bg-primary text-on-primary font-label-caps text-label-caps tracking-[0.18em] uppercase font-semibold active:scale-[0.99] hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2 shadow-lg"
+                onclick="handleBriefing('mandate')"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >business_center</span
+                >
+                <span>Initiate Mandate</span>
+              </button>
+              <button
+                class="w-full sm:w-auto py-3.5 px-8 bg-surface-container text-on-surface font-label-caps text-label-caps tracking-[0.18em] uppercase border border-outline-variant hover:border-primary active:scale-[0.99] transition-all flex items-center justify-center gap-2"
+                onclick="handleBriefing('dossier')"
+              >
+                <span class="material-symbols-outlined text-[18px] text-primary"
+                  >person_search</span
+                >
+                <span>Submit Dossier</span>
+              </button>
+            </div>
+            <!-- Quick Contact Telemetry -->
+            <div
+              class="w-full bg-surface-container p-5 md:p-6 text-left flex flex-col gap-2 border border-surface-container-high max-w-xl"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-label-caps text-[0.625rem] md:text-[0.6875rem] text-primary uppercase tracking-widest"
+                  >Confidential Advisory Desk</span
+                >
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
+              </div>
+              <div
+                class="font-body-md text-body-md md:text-body-lg text-on-surface font-medium select-all"
+              >
+                advisory@vanguard-global.com
+              </div>
+              <div
+                class="font-body-sm text-[0.75rem] md:text-body-sm text-on-surface-variant"
+              >
+                Direct bilateral response guaranteed within 4 hours across CET /
+                GMT / EST / SGT.
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Interactive Feedback Drawer / Modal -->
+        <div
+          class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4"
+          id="briefing-modal"
+        >
+          <div
+            class="w-full max-w-lg bg-surface-container-high p-6 md:p-8 text-on-surface flex flex-col gap-4 shadow-2xl border border-primary/40 animate-in duration-300"
+          >
+            <div
+              class="flex items-center justify-between pb-3 border-b border-surface-container-highest"
+            >
+              <span
+                class="font-label-caps text-label-caps text-primary uppercase tracking-widest"
+                id="modal-title"
+                >Confidential Initiation</span
+              >
+              <button
+                class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary"
+                onclick="
+                  document
+                    .getElementById('briefing-modal')
+                    .classList.add('hidden')
+                "
+              >
+                <span class="material-symbols-outlined text-[20px]">close</span>
+              </button>
+            </div>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant"
+              id="modal-desc"
+            >
+              Please indicate your primary sovereign jurisdiction. A partner
+              will reach out under strict NDA.
+            </p>
+            <input
+              class="w-full bg-surface-container-lowest p-3.5 text-on-surface font-body-sm outline-none border border-outline-variant focus:border-primary text-body-sm"
+              placeholder="principal@enterprise.com"
+              type="email"
+            />
+            <button
+              class="w-full py-3.5 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest font-semibold hover:bg-primary-container hover:text-on-primary-container transition-colors"
+              onclick="confirmSubmission()"
+            >
+              Confirm Transmission
+            </button>
+          </div>
+        </div>
+        <script>
+          function handleBriefing(type) {
+            const modal = document.getElementById("briefing-modal");
+            const title = document.getElementById("modal-title");
+            const desc = document.getElementById("modal-desc");
+            if (type === "mandate") {
+              title.innerText = "Initiate Employer Mandate";
+              desc.innerText =
+                "Specify your corporate domain and cross-border search requirements. Our Senior Partner will initiate contact under bilateral NDA.";
+            } else {
+              title.innerText = "Submit Confidential Dossier";
+              desc.innerText =
+                "Transmit your current executive credentials for non-advertised opportunities in Zurich, London, NYC, and Singapore.";
+            }
+            modal.classList.remove("hidden");
+          }
+
+          function confirmSubmission() {
+            const modal = document.getElementById("briefing-modal");
+            const title = document.getElementById("modal-title");
+            const desc = document.getElementById("modal-desc");
+            title.innerText = "Transmission Received";
+            desc.innerText =
+              "Protocol code #VGT-2025 logged. A managing director will reach out discreetly.";
+            setTimeout(() => {
+              modal.classList.add("hidden");
+            }, 1800);
+          }
+        </script>
+      </div>
+      <!-- RESPONSIVE FOOTER -->
+      <footer
+        class="w-full bg-surface-container-lowest text-on-surface mt-space-xl pt-14 md:pt-20 pb-16 px-margin md:px-8 lg:px-12 flex flex-col border-t border-surface-container-high/40"
+      >
+        <div class="max-w-7xl mx-auto w-full flex flex-col">
+          <!-- Top Row: Monogram, Descriptor & Desks -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-surface-container-high/40"
+          >
+            <div class="md:col-span-5 flex flex-col pr-4">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="h-9 w-9 bg-surface-container border border-primary/40 flex items-center justify-center text-primary font-headline-md text-xl"
+                >
+                  V
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-md text-title-lg text-primary tracking-wide"
+                    >Vanguard Global Talent</span
+                  >
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-[0.2em]"
+                    >Black Label Edition • Sovereign Advisory</span
+                  >
+                </div>
+              </div>
+              <p
+                class="font-body-sm text-body-sm text-outline leading-relaxed max-w-md"
+              >
+                Vanguard Global Talent operates as an independent executive
+                advisory partnership. Access to confidential search portfolios
+                and candidate dossiers is restricted to certified institutional
+                principals and vetted mandates.
+              </p>
+            </div>
+            <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6">
+              <div class="flex flex-col gap-2.5">
+                <span
+                  class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold"
+                  >Practice Index</span
+                >
+                <a
+                  class="text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+                  href="#"
+                  >Board &amp; CEO Advisory</a
+                >
+                <a
+                  class="text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+                  href="#"
+                  >Sovereign Wealth Funds</a
+                >
+                <a
+                  class="text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+                  href="#"
+                  >Private Equity Leadership</a
+                >
+                <a
+                  class="text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+                  href="#"
+                  >Institutional Strategy</a
+                >
+              </div>
+              <div class="flex flex-col gap-2.5">
+                <span
+                  class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold"
+                  >Governance</span
+                >
+                <a
+                  class="text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+                  href="#"
+                  >Confidential Mandates</a
+                >
+                <a
+                  class="text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+                  href="#"
+                  >Candidate Ethics Code</a
+                >
+                <a
+                  class="text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+                  href="#"
+                  >Data Sovereignty</a
+                >
+                <a
+                  class="text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+                  href="#"
+                  >Global Compliance</a
+                >
+              </div>
+              <div class="flex flex-col gap-2.5 col-span-2 sm:col-span-1">
+                <span
+                  class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold"
+                  >Corporate Seats</span
+                >
+                <div
+                  class="flex flex-col gap-1.5 text-on-surface-variant font-body-sm text-[0.8125rem]"
+                >
+                  <p>
+                    <strong class="text-on-surface">Zurich:</strong> Paradeplatz
+                    8
+                  </p>
+                  <p>
+                    <strong class="text-on-surface">London:</strong> Mayfair
+                    Place 4
+                  </p>
+                  <p>
+                    <strong class="text-on-surface">New York:</strong> 767 Fifth
+                    Ave
+                  </p>
+                  <p>
+                    <strong class="text-on-surface">Singapore:</strong> Marina
+                    Bay IFC
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bottom Copyright & Bilateral Jurisdictions -->
+          <div
+            class="flex flex-wrap items-center justify-between gap-4 pt-6 text-outline font-label-caps text-label-caps"
+          >
+            <span class="tracking-wider"
+              >© 2025 VANGUARD GLOBAL TALENT ADVISORY. ALL RIGHTS
+              RESERVED.</span
+            >
+            <span class="text-primary tracking-widest uppercase"
+              >GENEVA • ZURICH • LONDON • NYC • SINGAPORE</span
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
+    <nav
+      class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_16px_rgba(0,0,0,0.4)] md:hidden"
+      data-active-classes="text-primary font-semibold"
+    >
+      <div class="flex justify-around items-center h-16 px-space-xs">
+        <a
+          aria-current="page"
+          class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-2 transition-colors text-primary font-semibold"
+          data-path="global-executive-hub"
+          href="#"
+          ><span class="material-symbols-outlined text-[20px]">hub</span
+          ><span
+            class="font-label-caps text-[0.625rem] uppercase tracking-wider"
+            >Overview</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-2 text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="global-opportunities"
+          href="#"
+          ><span class="material-symbols-outlined text-[20px]"
+            >travel_explore</span
+          ><span
+            class="font-label-caps text-[0.625rem] uppercase tracking-wider"
+            >Mandates</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-2 text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="recruitment-services"
+          href="#"
+          ><span class="material-symbols-outlined text-[20px]"
+            >workspace_premium</span
+          ><span
+            class="font-label-caps text-[0.625rem] uppercase tracking-wider"
+            >Practices</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-2 text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="employer-mandates"
+          href="#"
+          ><span class="material-symbols-outlined text-[20px]">domain</span
+          ><span
+            class="font-label-caps text-[0.625rem] uppercase tracking-wider"
+            >Employers</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] px-2 text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="contact-briefing"
+          href="#"
+          ><span class="material-symbols-outlined text-[20px]"
+            >chat_bubble_outline</span
+          ><span
+            class="font-label-caps text-[0.625rem] uppercase tracking-wider"
+            >Briefing</span
+          ></a
+        >
+      </div>
+    </nav>
+  </body>
+</html>
